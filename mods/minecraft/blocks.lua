@@ -322,3 +322,44 @@ minetest.register_node("minecraft:obsidian", {
 	tiles = {"terrain.png^[sheet:16x16:5,2"},
 	groups = {cracky=1, level=3},
 })
+
+minetest.register_node("minecraft:tnt", {
+	description = "TNT",
+	tiles = {"terrain.png^[sheet:16x16:9,0",
+			 "terrain.png^[sheet:16x16:10,0",
+			 "terrain.png^[sheet:16x16:8,0"},
+	is_ground_content = false,
+	groups = {oddly_breakable_by_hand=3}
+})
+
+minetest.register_node("minecraft:wet_farmland", {
+	description = "Wet Farmland",
+	tiles ={"terrain.png^[sheet:16x16:6,5",
+			"terrain.png^[sheet:16x16:2,0",
+			"terrain.png^[sheet:16x16:2,0",},
+	groups = {crumbly=3, soil=1},
+	drawtype = "nodebox",
+	paramtype = "light",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5}, -- NodeBox1
+		}
+	}
+})
+
+minetest.register_node("minecraft:farmland", {
+	description = "Farmland",
+	tiles ={"terrain.png^[sheet:16x16:7,5",
+			"terrain.png^[sheet:16x16:2,0",
+			"terrain.png^[sheet:16x16:2,0",},
+	groups = {crumbly=3, soil=1},
+	drawtype = "nodebox",
+	paramtype = "light",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5}, -- NodeBox1
+		}
+	}
+})
