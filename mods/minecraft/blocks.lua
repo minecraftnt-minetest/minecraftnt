@@ -33,7 +33,7 @@ minetest.register_node("minecraft:leaves", {
 	tiles = {"terrain.png^[sheet:16x16:4,3"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy=1,oddly_breakable_by_hand=3},
+	groups = {snappy=1,dig_immediate=1},
 })
 
 minetest.register_node("minecraft:plank", {
@@ -329,7 +329,7 @@ minetest.register_node("minecraft:tnt", {
 			 "terrain.png^[sheet:16x16:10,0",
 			 "terrain.png^[sheet:16x16:8,0"},
 	is_ground_content = false,
-	groups = {oddly_breakable_by_hand=3}
+	groups = {dig_immediate=2}
 })
 
 minetest.register_node("minecraft:wet_farmland", {
@@ -362,4 +362,13 @@ minetest.register_node("minecraft:farmland", {
 			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5}, -- NodeBox1
 		}
 	}
+})
+
+minetest.register_node("minecraft:sapling", {
+	description = "Oak Sapling",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:15,0"},
+	groups = {dig_immediate=2,snappy=3}
 })
