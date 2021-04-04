@@ -20,14 +20,14 @@ minetest.register_node("minecraft:dirt", {
 })
 
 minetest.register_node("minecraft:oak", {
-	description = "Oak Log",
+	description = "Wood",
 	tiles = {"terrain.png^[sheet:16x16:5,1", "terrain.png^[sheet:16x16:5,1", "terrain.png^[sheet:16x16:4,1"},
 	is_ground_content = false,
 	groups = {choppy=2,oddly_breakable_by_hand=2},
 })
 
 minetest.register_node("minecraft:leaves", {
-	description = "Oak Leaves",
+	description = "Leaves",
 	drop = "",
 	drawtype = "allfaces_optional",
 	tiles = {"terrain.png^[sheet:16x16:4,3"},
@@ -37,7 +37,7 @@ minetest.register_node("minecraft:leaves", {
 })
 
 minetest.register_node("minecraft:plank", {
-	description = "Planks",
+	description = "Wooden Planks",
 	tiles = {"terrain.png^[sheet:16x16:4,0"},
 	is_ground_content = false,
 	groups = {choppy=2,oddly_breakable_by_hand=2},
@@ -74,7 +74,7 @@ minetest.register_node("minecraft:cobble", {
 })
 
 minetest.register_node("minecraft:mossycobble", {
-	description = "Mossy Cobblestone",
+	description = "Moss Stone",
 	tiles ={"terrain.png^[sheet:16x16:4,2"},
 	is_ground_content = false,
 	groups = {cracky=3},
@@ -126,7 +126,7 @@ minetest.register_node("minecraft:diamond_ore", {
 })
 
 minetest.register_node("minecraft:plank_stairs", {
-	description = "Planks Stairs",
+	description = "Wooden Stairs",
 	tiles = {"terrain.png^[sheet:16x16:4,0"},
 	is_ground_content = false,
 	groups = {choppy=2,oddly_breakable_by_hand=2},
@@ -143,7 +143,7 @@ minetest.register_node("minecraft:plank_stairs", {
 })
 
 minetest.register_node("minecraft:cobble_stairs", {
-	description = "Cobblestone Stairs",
+	description = "Stone Stairs",
 	tiles ={"terrain.png^[sheet:16x16:0,1"},
 	is_ground_content = false,
 	groups = {cracky=3},
@@ -160,7 +160,7 @@ minetest.register_node("minecraft:cobble_stairs", {
 })
 
 minetest.register_node("minecraft:plank_slab", {
-	description = "Planks Slab",
+	description = "Wooden Slab",
 	tiles = {"terrain.png^[sheet:16x16:4,0"},
 	is_ground_content = false,
 	groups = {choppy=2,oddly_breakable_by_hand=2},
@@ -175,7 +175,7 @@ minetest.register_node("minecraft:plank_slab", {
 })
 
 minetest.register_node("minecraft:cobble_slab", {
-	description = "Cobblestone Slab",
+	description = "Stone Slab",
 	tiles ={"terrain.png^[sheet:16x16:0,1"},
 	is_ground_content = false,
 	groups = {cracky=3},
@@ -212,7 +212,7 @@ minetest.register_node("minecraft:stone_slab", {
 })
 
 minetest.register_node("minecraft:stone_slab_block", {
-	description = "Stone Slab Block",
+	description = "tile.stoneSlab",
 	tiles = {
         "terrain.png^[sheet:16x16:6,0",    -- y+
         "terrain.png^[sheet:16x16:6,0",  -- y-
@@ -228,7 +228,7 @@ minetest.register_node("minecraft:stone_slab_block", {
 
 
 minetest.register_node("minecraft:iron_block", {
-	description = "Iron Block",
+	description = "Block of Iron",
 	tiles = {
         "terrain.png^[sheet:16x16:6,1",    -- y+
         "terrain.png^[sheet:16x16:6,3",  -- y-
@@ -241,7 +241,7 @@ minetest.register_node("minecraft:iron_block", {
 })
 
 minetest.register_node("minecraft:gold_block", {
-	description = "Gold Block",
+	description = "Block of Gold",
 	tiles = {
         "terrain.png^[sheet:16x16:7,1",    -- y+
         "terrain.png^[sheet:16x16:7,3",  -- y-
@@ -254,7 +254,7 @@ minetest.register_node("minecraft:gold_block", {
 })
 
 minetest.register_node("minecraft:diamond_Block", {
-	description = "Diamond Block",
+	description = "Block of Diamond",
 	tiles = {
         "terrain.png^[sheet:16x16:8,1",    -- y+
         "terrain.png^[sheet:16x16:8,3",  -- y-
@@ -305,7 +305,7 @@ minetest.register_node("minecraft:furnace", {
 })
 
 minetest.register_node("minecraft:lit_furnace", {
-	description = "Lit Furnace",
+	description = "Furnace",
 	paramtype2 = "facedir",
 	tiles = {"terrain.png^[sheet:16x16:1,0",
 			 "terrain.png^[sheet:16x16:1,0",
@@ -333,7 +333,7 @@ minetest.register_node("minecraft:tnt", {
 })
 
 minetest.register_node("minecraft:wet_farmland", {
-	description = "Wet Farmland",
+	description = "Farmland",
 	tiles ={"terrain.png^[sheet:16x16:6,5",
 			"terrain.png^[sheet:16x16:2,0",
 			"terrain.png^[sheet:16x16:2,0",},
@@ -365,10 +365,46 @@ minetest.register_node("minecraft:farmland", {
 })
 
 minetest.register_node("minecraft:sapling", {
-	description = "Oak Sapling",
+	description = "Sapling",
     drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:15,0"},
 	groups = {dig_immediate=2,snappy=3}
+})
+
+minetest.register_node("minecraft:flower", {
+	description = "Flower",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:13,0"},
+	groups = {dig_immediate=2,snappy=3}
+})
+
+minetest.register_node("minecraft:rose", {
+	description = "Rose",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:12,0"},
+	groups = {dig_immediate=2,snappy=3}
+})
+
+minetest.register_node("minecraft:mushroom", {
+	description = "Mushroom",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:12,1"},
+	groups = {dig_immediate=2}
+})
+
+minetest.register_node("minecraft:mushroom2", {
+	description = "Mushroom",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:13,1"},
+	groups = {dig_immediate=2}
 })
