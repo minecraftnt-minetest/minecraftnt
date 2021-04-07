@@ -1,6 +1,6 @@
 minetest.register_alias("mapgen_stone", "minecraft:stone")
-minetest.register_alias("mapgen_water_source", "minecraft:water")
-minetest.register_alias("mapgen_river_water_source", "minecraft:water")
+minetest.register_alias("mapgen_water_source", "minecraft:water_source")
+minetest.register_alias("mapgen_river_water_source", "minecraft:water_source")
 
 minetest.clear_registered_biomes()
 minetest.clear_registered_ores()
