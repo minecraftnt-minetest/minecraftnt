@@ -12,10 +12,26 @@ minetest.register_biome({
 	depth_top = 1,
 	node_filler = "minecraft:dirt",
 	depth_filler = 3,
-	y_max = 1000,
+	node_riverbed = "minecraft:sand",
+	depth_riverbed = 2,
+	y_max = 31000,
+	y_min = 4,
+	heat_point = 50,
+	humidity_point = 12,
+})
+
+minetest.register_biome({
+	name = "beach",
+	node_top = "minecraft:sand",
+	depth_top = 1,
+	node_filler = "minecraft:sand",
+	depth_filler = 2,
+	node_riverbed = "minecraft:sand",
+	depth_riverbed = 2,
+	y_max = 4,
 	y_min = -3,
 	heat_point = 50,
-	humidity_point = 50,
+	humidity_point = 35,
 })
 
 minetest.register_decoration({
