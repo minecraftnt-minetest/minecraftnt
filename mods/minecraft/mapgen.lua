@@ -35,6 +35,29 @@ minetest.register_biome({
 })
 
 minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"minecraft:grass"},
+    sidelen = 16,
+    fill_ratio = 0.01,
+    biomes = {"grasslands"},
+    y_max = 200,
+    y_min = 1,
+    decoration = "minecraft:rose",
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"minecraft:grass"},
+    sidelen = 16,
+    fill_ratio = 0.01,
+    biomes = {"grasslands"},
+    y_max = 200,
+    y_min = 1,
+    decoration = "minecraft:flower",
+})
+
+
+minetest.register_decoration({
 	name = "minecraft:tree",
 	deco_type = "schematic",
 	place_on = {"minecraft:grass"},
