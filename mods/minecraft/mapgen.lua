@@ -17,3 +17,17 @@ minetest.register_biome({
 	heat_point = 50,
 	humidity_point = 50,
 })
+
+minetest.register_decoration({
+	name = "minecraft:tree",
+	deco_type = "schematic",
+	place_on = {"minecraft:grass"},
+	sidelen = 16,
+	fill_ratio = 0.001,
+	biomes = {"grasslands"},
+	y_max = 31000,
+	y_min = 1,
+	schematic = minetest.get_modpath("minecraft") .. "/schematics/tree.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
