@@ -408,12 +408,3 @@ minetest.register_node("minecraft:mushroom2", {
     tiles = {"terrain.png^[sheet:16x16:13,1"},
 	groups = {dig_immediate=2}
 })
-
-minetest.register_node("minecraft:web", {
-	description = "Cobweb",
-    drawtype = "plantlike",
-	paramtype = "light",
-	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:11,0"},
-	groups = {disable_jump=1,snappy=1,oddly_breakable_by_hand=1}
-})
