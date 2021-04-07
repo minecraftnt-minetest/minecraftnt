@@ -33,7 +33,7 @@ minetest.register_node("minecraft:leaves", {
 	tiles = {"terrain.png^[sheet:16x16:4,3"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy=1,dig_immediate=1},
+	groups = {snappy=1,dig_immediate=3},
 })
 
 minetest.register_node("minecraft:plank", {
@@ -407,4 +407,13 @@ minetest.register_node("minecraft:mushroom2", {
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:13,1"},
 	groups = {dig_immediate=2}
+})
+
+minetest.register_node("minecraft:web", {
+	description = "Cobweb",
+    drawtype = "plantlike",
+	paramtype = "light",
+	walkable = false,
+    tiles = {"terrain.png^[sheet:16x16:11,0"},
+	groups = {disable_jump=1,snappy=1,oddly_breakable_by_hand=1}
 })
