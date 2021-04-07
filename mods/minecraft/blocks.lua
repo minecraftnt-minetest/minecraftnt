@@ -28,12 +28,20 @@ minetest.register_node("minecraft:oak", {
 
 minetest.register_node("minecraft:leaves", {
 	description = "Leaves",
-	drop = "",
 	drawtype = "allfaces_optional",
 	tiles = {"terrain.png^[sheet:16x16:4,3"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy=1,dig_immediate=3},
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				items = {"minecraft:sapling"},
+				rarity = 10, -- a1.0.0 has 1/10 chance of leaves dropping sapling
+			},
+		}
+	},
 })
 
 minetest.register_node("minecraft:plank", {
