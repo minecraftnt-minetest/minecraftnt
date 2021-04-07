@@ -408,3 +408,16 @@ minetest.register_node("minecraft:mushroom2", {
     tiles = {"terrain.png^[sheet:16x16:13,1"},
 	groups = {dig_immediate=2}
 })
+
+-- TODO: replace with actual liquid blocks, this is only mapgen filler.
+minetest.register_node("minecraft:water_source", {
+	description = "Temp Water",
+	tiles = {"terrain.png^[sheet:16x16:15,13"},
+	groups = {cracky=3},
+})
+
+minetest.register_node("minecraft:lava_source", {
+	description = "Temp Lava",
+	tiles = {"terrain.png^[sheet:16x16:15,15"},
+	groups = {cracky=3},
+})
