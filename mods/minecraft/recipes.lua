@@ -53,7 +53,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "minecraft:gold_pickaxe",
+	output = "minecraft:golden_pickaxe",
 	recipe = {
 		{"minecraft:gold_ingot", "minecraft:gold_ingot", "minecraft:gold_ingot"},
 		{"", "minecraft:stick", ""},
