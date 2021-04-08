@@ -16,7 +16,8 @@ sfinv.register_page("sfinv:main", {
 			list[current_player;armor;0.25,0.25;1,4;0]
 			box[1.5,0.25;3,4.75;black]
 			model[1.5,0.25;3,4.75;playermodel;character.b3d;character.png;0,180;false;false;walk,stand]
-			list[current_player;craft;5,1.5.25;2,2;0]
+			list[current_player;craft;5,1.5.25;2,1;0]
+			list[current_player;craft;5,2.75;2,1;3]
 			list[current_player;craftpreview;8.75,2.12;2,2;0]
 			image[7.5,2.12;1,1;sfinv_crafting_arrow.png]
 			]])
