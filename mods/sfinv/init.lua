@@ -9,10 +9,10 @@ sfinv.register_page("sfinv:main", {
 	title = S("Main"),
 	get = function(self, player, context)
 		return sfinv.make_formspec(player, context, [[
-			size[10.25,10.75,true]
+			size[11.5,10.75,true]
 			real_coordinates[true]
-			list[current_player;main;0.25,9.5;8,1;0]
-			list[current_player;main;0.25,5.5;8,3;8]
+			list[current_player;main;0.25,9.5;9,1;0]
+			list[current_player;main;0.25,5.5;9,3;9]
 			list[current_player;armor;0.25,0.25;1,4;0]
 			box[1.5,0.25;3,4.75;black]
 			model[1.5,0.25;3,4.75;playermodel;character.b3d;character.png;0,180;false;false;walk,stand]
@@ -24,8 +24,12 @@ sfinv.register_page("sfinv:main", {
 })
 
 minetest.register_on_joinplayer(function(ObjectRef)
-    local InvRef = ObjectRef:get_inventory()
+	ObjectRef:get_inventory():set_width("main", 9)
+	ObjectRef:get_inventory():set_size("main", 36)
+	ObjectRef:hud_set_hotbar_itemcount(9)
 
-    InvRef:set_list("armor", armor)
-    InvRef:set_size("armor", 4)
+	local InvRef = ObjectRef:get_inventory()
+
+	InvRef:set_list("armor", armor)
+	InvRef:set_size("armor", 4)
 end)

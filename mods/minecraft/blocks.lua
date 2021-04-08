@@ -288,14 +288,16 @@ minetest.register_node("minecraft:crafting_table", {
 		player:get_inventory():set_width("craft", 3)
 		player:get_inventory():set_size("craft", 9)
 
-		local form = "size[9,8.75]"..
-		"image[4.7,1.5;1.5,1;arrow.png]"..
-		"list[current_player;main;0,4.5;9,3;9]"..
-		"list[current_player;main;0,7.74;9,1;]"..
-		"list[current_player;craft;1.75,0.5;3,3;]"..
-		"list[current_player;craftpreview;6.1,1.5;1,1;]"..
-		"listring[current_player;main]"..
-		"listring[current_player;craft]"
+		local form = [[
+			size[9,8.75]
+			image[4.7,1.5;1.5,1;arrow.png]
+			list[current_player;main;0,4.5;9,3;9]
+			list[current_player;main;0,7.74;9,1;]
+			list[current_player;craft;1.75,0.5;3,3;]
+			list[current_player;craftpreview;6.1,1.5;1,1;]
+			listring[current_player;main]
+			listring[current_player;craft]
+		]]
 
 		minetest.show_formspec(player:get_player_name(), "main", form)
 	end,
