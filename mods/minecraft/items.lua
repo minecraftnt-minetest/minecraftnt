@@ -42,3 +42,22 @@ else
 	})
 end
 
+minetest.register_craftitem("minecraft:stick", {
+    description = "Stick",
+    inventory_image = "items.png^[sheet:16x16:5,3"
+})
+
+minetest.register_craftitem("minecraft:iron_ingot", {
+    description = "Iron Ingot",
+    inventory_image = "items.png^[sheet:16x16:7,1"
+})
+
+minetest.register_craftitem("minecraft:gold_ingot", {
+    description = "Gold Ingot",
+    inventory_image = "items.png^[sheet:16x16:7,2"
+})
+
+minetest.register_craftitem("minecraft:diamond", {
+    description = "Diamond",
+    inventory_image = "items.png^[sheet:16x16:7,3"
+})
