@@ -2,6 +2,7 @@ minetest.register_node("minecraft:stone", {
 	description = "Stone",
 	tiles = {"terrain.png^[sheet:16x16:1,0"},
 	groups = {cracky=3},
+	drop = "minecraft:cobble"
 })
 
 minetest.register_node("minecraft:grass", {
