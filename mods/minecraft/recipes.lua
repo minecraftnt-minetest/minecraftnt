@@ -70,4 +70,49 @@ minetest.register_craft({
 	}
 })
 
+-- Shovels
 
+minetest.register_craft({
+	output = "minecraft:wooden_shovel",
+	recipe = {
+		{"", "minecraft:plank", ""},
+		{"", "minecraft:stick", ""},
+		{"", "minecraft:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:stone_shovel",
+	recipe = {
+		{"", "minecraft:cobble", ""},
+		{"", "minecraft:stick", ""},
+		{"", "minecraft:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:iron_shovel",
+	recipe = {
+		{"", "minecraft:iron_ingot", ""},
+		{"", "minecraft:stick", ""},
+		{"", "minecraft:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:gold_shovel",
+	recipe = {
+		{"", "minecraft:gold_ingot", ""},
+		{"", "minecraft:stick", ""},
+		{"", "minecraft:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:diamond_shovel",
+	recipe = {
+		{"", "minecraft:diamond", ""},
+		{"", "minecraft:stick", ""},
+		{"", "minecraft:stick", ""},
+	}
+})
