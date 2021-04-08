@@ -284,6 +284,21 @@ minetest.register_node("minecraft:crafting_table", {
 			 "terrain.png^[sheet:16x16:12,3",},
 	is_ground_content = false,
 	groups = {choppy=2,oddly_breakable_by_hand=2},
+	on_rightclick = function(pos, node, player, itemstack)
+		player:get_inventory():set_width("craft", 3)
+		player:get_inventory():set_size("craft", 9)
+
+		local form = "size[9,8.75]"..
+		"image[4.7,1.5;1.5,1;arrow.png]"..
+		"list[current_player;main;0,4.5;9,3;9]"..
+		"list[current_player;main;0,7.74;9,1;]"..
+		"list[current_player;craft;1.75,0.5;3,3;]"..
+		"list[current_player;craftpreview;6.1,1.5;1,1;]"..
+		"listring[current_player;main]"..
+		"listring[current_player;craft]"
+
+		minetest.show_formspec(player:get_player_name(), "main", form)
+	end,
 })
 
 minetest.register_node("minecraft:chest", {
