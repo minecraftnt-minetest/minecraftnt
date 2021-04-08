@@ -17,7 +17,7 @@ sfinv.register_page("sfinv:main", {
 			box[1.5,0.25;3,4.75;black]
 			model[1.5,0.25;3,4.75;playermodel;character.b3d;character.png;0,180;false;false;walk,stand]
 			list[current_player;craft;5,1.5.25;2,2;0]
-			list[current_player;craftresult;8.75,2.12;2,2;0]
+			list[current_player;craftpreview;8.75,2.12;2,2;0]
 			image[7.5,2.12;1,1;sfinv_crafting_arrow.png]
 			]])
 	end
@@ -25,7 +25,7 @@ sfinv.register_page("sfinv:main", {
 
 minetest.register_on_joinplayer(function(ObjectRef)
     local InvRef = ObjectRef:get_inventory()
-    
+
     InvRef:set_list("armor", armor)
     InvRef:set_size("armor", 4)
 end)
