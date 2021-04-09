@@ -23,96 +23,45 @@ minetest.register_craft({
 	}
 })
 
--- Pickaxes
+--
+-- Tool recipes.
+--
 
-minetest.register_craft({
-	output = "minecraft:wooden_pickaxe",
-	recipe = {
-		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
+tool_data = {
+	{
+		material = "minecraft:plank",
+		output = "minecraft:wooden_",
+	}, {
+		material = "minecraft:cobble",
+		output = "minecraft:stone_",
+	}, {
+		material = "minecraft:iron_ingot",
+		output = "minecraft:iron_",
+	}, {
+		material = "minecraft:gold_ingot",
+		output = "minecraft:golden_",
+	}, {
+		material = "minecraft:diamond",
+		output = "minecraft:diamond_",
 	}
-})
+}
 
-minetest.register_craft({
-	output = "minecraft:stone_pickaxe",
-	recipe = {
-		{"minecraft:cobble", "minecraft:cobble", "minecraft:cobble"},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
+for k, v in pairs(tool_data) do
+	minetest.register_craft({
+		output = v['output'].."pickaxe",
+		recipe = {
+			{v['material'], v['material'], v['material']},
+			{"", "minecraft:stick", ""},
+			{"", "minecraft:stick", ""},
+		}
+	})
 
-minetest.register_craft({
-	output = "minecraft:iron_pickaxe",
-	recipe = {
-		{"minecraft:iron_ingot", "minecraft:iron_ingot", "minecraft:iron_ingot"},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:golden_pickaxe",
-	recipe = {
-		{"minecraft:gold_ingot", "minecraft:gold_ingot", "minecraft:gold_ingot"},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:diamond_pickaxe",
-	recipe = {
-		{"minecraft:diamond", "minecraft:diamond", "minecraft:diamond"},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
--- Shovels
-
-minetest.register_craft({
-	output = "minecraft:wooden_shovel",
-	recipe = {
-		{"", "minecraft:plank", ""},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:stone_shovel",
-	recipe = {
-		{"", "minecraft:cobble", ""},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:iron_shovel",
-	recipe = {
-		{"", "minecraft:iron_ingot", ""},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:gold_shovel",
-	recipe = {
-		{"", "minecraft:gold_ingot", ""},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "minecraft:diamond_shovel",
-	recipe = {
-		{"", "minecraft:diamond", ""},
-		{"", "minecraft:stick", ""},
-		{"", "minecraft:stick", ""},
-	}
-})
+	minetest.register_craft({
+		output = v['output'].."shovel",
+		recipe = {
+			{"", v['material'], ""},
+			{"", "minecraft:stick", ""},
+			{"", "minecraft:stick", ""},
+		}
+	})
+end
