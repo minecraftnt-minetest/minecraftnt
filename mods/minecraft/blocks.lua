@@ -440,3 +440,7 @@ minetest.register_node("minecraft:spawner", {
 	groups = {choppy=1},
 	drop = "",
 })
+
+-- More blocks that are in their separate code file.
+
+dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
