@@ -42,22 +42,142 @@ else
 	})
 end
 
-minetest.register_craftitem("minecraft:stick", {
-    description = "Stick",
-    inventory_image = "items.png^[sheet:16x16:5,3"
+minetest.register_craftitem("minecraft:flint_and_steel", {
+	description = "Flint and Steel",
+	inventory_image = "items.png^[sheet:16x16:5,0"
+})
+
+minetest.register_craftitem("minecraft:flint", {
+	description = "Flint",
+	inventory_image = "items.png^[sheet:16x16:6,0"
+})
+
+minetest.register_craftitem("minecraft:coal", {
+	description = "Coal",
+	inventory_image = "items.png^[sheet:16x16:7,0"
+})
+
+minetest.register_craftitem("minecraft:string", {
+	description = "String",
+	inventory_image = "items.png^[sheet:16x16:8,0"
+})
+
+minetest.register_craftitem("minecraft:seeds", {
+	description = "Seeds",
+	inventory_image = "items.png^[sheet:16x16:9,0"
+})
+
+minetest.register_craftitem("minecraft:apple", {
+	description = "Apple",
+	inventory_image = "items.png^[sheet:16x16:10,0"
+})
+
+minetest.register_craftitem("minecraft:golden_apple", {
+	description = "Golden Apple",
+	inventory_image = "items.png^[sheet:16x16:11,0"
+})
+
+minetest.register_craftitem("minecraft:bow", {
+	description = "Bow",
+	inventory_image = "items.png^[sheet:16x16:5,1"
 })
 
 minetest.register_craftitem("minecraft:iron_ingot", {
-    description = "Iron Ingot",
-    inventory_image = "items.png^[sheet:16x16:7,1"
+	description = "Iron Ingot",
+	inventory_image = "items.png^[sheet:16x16:7,1"
+})
+
+minetest.register_craftitem("minecraft:feather", {
+	description = "Feather",
+	inventory_image = "items.png^[sheet:16x16:8,1"
+})
+
+minetest.register_craftitem("minecraft:wheat", {
+	description = "Wheat",
+	inventory_image = "items.png^[sheet:16x16:9,1"
+})
+
+minetest.register_craftitem("minecraft:painting", {
+	description = "Painting",
+	inventory_image = "items.png^[sheet:16x16:10,1"
+})
+
+minetest.register_craftitem("minecraft:", {
+	description = "Arrow",
+	inventory_image = "items.png^[sheet:16x16:5,2"
 })
 
 minetest.register_craftitem("minecraft:gold_ingot", {
-    description = "Gold Ingot",
-    inventory_image = "items.png^[sheet:16x16:7,2"
+	description = "Gold Ingot",
+	inventory_image = "items.png^[sheet:16x16:7,2"
+})
+
+minetest.register_craftitem("minecraft:gunpowder", {
+	description = "Gunpowder",
+	inventory_image = "items.png^[sheet:16x16:8,2"
+})
+
+minetest.register_craftitem("minecraft:bread", {
+	description = "Bread",
+	inventory_image = "items.png^[sheet:16x16:9,2"
+})
+
+minetest.register_craftitem("minecraft:sign", {
+	description = "Sign",
+	inventory_image = "items.png^[sheet:16x16:10,2"
+})
+
+minetest.register_craftitem("minecraft:stick", {
+	description = "Stick",
+	inventory_image = "items.png^[sheet:16x16:5,3"
 })
 
 minetest.register_craftitem("minecraft:diamond", {
-    description = "Diamond",
-    inventory_image = "items.png^[sheet:16x16:7,3"
+	description = "Diamond",
+	inventory_image = "items.png^[sheet:16x16:7,3"
+})
+
+minetest.register_craftitem("minecraft:bowl", {
+	description = "Bowl",
+	inventory_image = "items.png^[sheet:16x16:7,4"
+})
+
+minetest.register_craftitem("minecraft:mushroom_stew", {
+	description = "Mushroom Stew",
+	inventory_image = "items.png^[sheet:16x16:8,4"
+})
+
+minetest.register_craftitem("minecraft:bucket", {
+	description = "Bucket",
+	inventory_image = "items.png^[sheet:16x16:10,4"
+})
+
+minetest.register_craftitem("minecraft:water_bucket", {
+	description = "Water Bucket",
+	inventory_image = "items.png^[sheet:16x16:11,4"
+})
+
+minetest.register_craftitem("minecraft:lava_bucket", {
+	description = "Lava Bucket",
+	inventory_image = "items.png^[sheet:16x16:12,4"
+})
+
+minetest.register_craftitem("minecraft:raw_porkchop", {
+	description = "Raw Porkchop",
+	inventory_image = "items.png^[sheet:16x16:7,5"
+})
+
+minetest.register_craftitem("minecraft:cooked_porkchop", {
+	description = "Cooked Porkchop",
+	inventory_image = "items.png^[sheet:16x16:8,5"
+})
+
+minetest.register_craftitem("minecraft:saddle", {
+	description = "Saddle",
+	inventory_image = "items.png^[sheet:16x16:8,6"
+})
+
+minetest.register_craftitem("minecraft:minecart", {
+	description = "Minecart",
+	inventory_image = "items.png^[sheet:16x16:7,8"
 })
