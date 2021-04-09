@@ -114,6 +114,7 @@ minetest.register_node("minecraft:coal_ore", {
 	description = "Coal Ore",
 	tiles = {"terrain.png^[sheet:16x16:2,2"},
 	groups = {cracky = 3},
+	drop = "minecraft:coal"
 })
 
 minetest.register_node("minecraft:iron_ore", {
@@ -132,6 +133,7 @@ minetest.register_node("minecraft:diamond_ore", {
 	description = "Diamond Ore",
 	tiles = {"terrain.png^[sheet:16x16:2,3"},
 	groups = {cracky=1,level=2},
+	drop = "minecraft:diamond"
 })
 
 minetest.register_node("minecraft:plank_stairs", {
