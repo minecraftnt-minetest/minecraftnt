@@ -161,3 +161,86 @@ minetest.register_tool("minecraft:diamond_shovel", {
 		punch_attack_uses = 781,
 	},
 })
+
+-- Axes
+
+minetest.register_tool("minecraft:wooden_axe", {
+	description = "Wooden Axe",
+	inventory_image = "items.png^[sheet:16x16:0,7",
+	tool_capabilities = {
+		max_drop_level = 1,
+		groupcaps = {
+			choppy = {
+				maxlevel = 1,
+				uses = 59,
+				times = { [2]=3.00, [3]=1.60 }
+			},
+		},
+		damage_groups = {fleshy=7},
+		punch_attack_uses = 30,
+	},
+})
+minetest.register_tool("minecraft:stone_axe", {
+	description = "Stone Axe",
+	inventory_image = "items.png^[sheet:16x16:1,7",
+	tool_capabilities = {
+		max_drop_level = 1,
+		groupcaps = {
+			choppy = {
+				maxlevel = 1,
+				uses = 131,
+				times = { [1]=3.00, [2]=2.00, [3]=1.30 }
+			},
+		},
+		damage_groups = {fleshy=9},
+		punch_attack_uses = 66,
+	},
+})
+minetest.register_tool("minecraft:iron_axe", {
+	description = "Iron Axe",
+	inventory_image = "items.png^[sheet:16x16:2,7",
+	tool_capabilities = {
+		max_drop_level = 1,
+		groupcaps = {
+			choppy = {
+				maxlevel = 2,
+				uses = 250,
+				times = { [1]=2.50, [2]=1.40, [3]=1.00 }
+			},
+		},
+		damage_groups = {fleshy=9},
+		punch_attack_uses = 126,
+	},
+})
+minetest.register_tool("minecraft:golden_axe", {
+	description = "Golden Axe",
+	inventory_image = "items.png^[sheet:16x16:4,7",
+	tool_capabilities = {
+		max_drop_level = 1,
+		groupcaps = {
+			choppy = {
+				maxlevel = 2,
+				uses = 32,
+				times = { [2]=3.00, [3]=1.60 }
+			},
+		},
+		damage_groups = {fleshy=7},
+		punch_attack_uses = 17,
+	},
+})
+minetest.register_tool("minecraft:diamond_axe", {
+	description = "Diamond Axe",
+	inventory_image = "items.png^[sheet:16x16:3,7",
+	tool_capabilities = {
+		max_drop_level = 1,
+		groupcaps = {
+			choppy = {
+				maxlevel = 3,
+				uses = 1561,
+				times = { [1]=3.00, [2]=1.60, [3]=0.60 }
+			},
+		},
+		damage_groups = {fleshy=9},
+		punch_attack_uses = 781,
+	},
+})

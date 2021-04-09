@@ -47,6 +47,7 @@ tool_data = {
 }
 
 for k, v in pairs(tool_data) do
+	-- Pickaxes
 	minetest.register_craft({
 		output = v['output'].."pickaxe",
 		recipe = {
@@ -56,12 +57,33 @@ for k, v in pairs(tool_data) do
 		}
 	})
 
+	-- Shovels
 	minetest.register_craft({
 		output = v['output'].."shovel",
 		recipe = {
-			{"", v['material'], ""},
-			{"", "minecraft:stick", ""},
-			{"", "minecraft:stick", ""},
+			{v['material']},
+			{"minecraft:stick"},
+			{"minecraft:stick"},
+		}
+	})
+
+	-- Axes
+	minetest.register_craft({
+		output = v['output'].."axe",
+		recipe = {
+			{v['material'], v['material']},
+			{"minecraft:stick", v['material']},
+			{"minecraft:stick", ""},
+		}
+	})
+
+	-- Axes (Mirrored)
+	minetest.register_craft({
+		output = v['output'].."axe",
+		recipe = {
+			{v['material'], v['material']},
+			{v['material'], "minecraft:stick"},
+			{"", "minecraft:stick"},
 		}
 	})
 end
