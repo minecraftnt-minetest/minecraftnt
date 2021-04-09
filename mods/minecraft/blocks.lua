@@ -445,4 +445,5 @@ minetest.register_node("minecraft:spawner", {
 
 -- More blocks that are in their separate code file.
 
+dofile(minetest.get_modpath("minecraft") .. "/blocks/liquids.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
