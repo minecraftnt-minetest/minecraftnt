@@ -232,6 +232,7 @@ minetest.register_node("minecraft:stone_slab_block", {
     },
 	is_ground_content = false,
 	groups = {cracky=3},
+	drop = "minecraft:stone_slab"
 })
 
 
@@ -364,14 +365,6 @@ minetest.register_node("minecraft:wet_farmland", {
 			"terrain.png^[sheet:16x16:2,0",
 			"terrain.png^[sheet:16x16:2,0",},
 	groups = {crumbly=3, soil=1},
-	drawtype = "nodebox",
-	paramtype = "light",
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5}, -- NodeBox1
-		}
-	}
 })
 
 minetest.register_node("minecraft:farmland", {
@@ -380,14 +373,6 @@ minetest.register_node("minecraft:farmland", {
 			"terrain.png^[sheet:16x16:2,0",
 			"terrain.png^[sheet:16x16:2,0",},
 	groups = {crumbly=3, soil=1},
-	drawtype = "nodebox",
-	paramtype = "light",
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5}, -- NodeBox1
-		}
-	}
 })
 
 minetest.register_node("minecraft:sapling", {
@@ -396,7 +381,8 @@ minetest.register_node("minecraft:sapling", {
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:15,0"},
-	groups = {dig_immediate=2,snappy=3}
+	groups = {dig_immediate=2,snappy=3},
+	inventory_image = "terrain.png^[sheet:16x16:15,0"
 })
 
 minetest.register_node("minecraft:flower", {
@@ -405,7 +391,8 @@ minetest.register_node("minecraft:flower", {
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:13,0"},
-	groups = {dig_immediate=2,snappy=3}
+	groups = {dig_immediate=2,snappy=3},
+	inventory_image = "terrain.png^[sheet:16x16:13,0"
 })
 
 minetest.register_node("minecraft:rose", {
@@ -414,7 +401,8 @@ minetest.register_node("minecraft:rose", {
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:12,0"},
-	groups = {dig_immediate=2,snappy=3}
+	groups = {dig_immediate=2,snappy=3},
+	inventory_image = "terrain.png^[sheet:16x16:12,0"
 })
 
 minetest.register_node("minecraft:mushroom", {
@@ -423,7 +411,8 @@ minetest.register_node("minecraft:mushroom", {
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:12,1"},
-	groups = {dig_immediate=2}
+	groups = {dig_immediate=2},
+	inventory_image = "terrain.png^[sheet:16x16:12,1"
 })
 
 minetest.register_node("minecraft:mushroom2", {
@@ -432,5 +421,22 @@ minetest.register_node("minecraft:mushroom2", {
 	paramtype = "light",
 	walkable = false,
     tiles = {"terrain.png^[sheet:16x16:13,1"},
-	groups = {dig_immediate=2}
+	groups = {dig_immediate=2},
+	inventory_image = "terrain.png^[sheet:16x16:13,1"
+})
+
+minetest.register_node("minecraft:wool", {
+	description = "Wool",
+    tiles = {"terrain.png^[sheet:16x16:0,4"},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3,wood}
+})
+
+minetest.register_node("minecraft:spawner", {
+	description = "Mob Spawner",
+	drawtype = "allfaces",
+	tiles = {"terrain.png^[sheet:16x16:1,4"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {choppy=1},
+	drop = "",
 })
