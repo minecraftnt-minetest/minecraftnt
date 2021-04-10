@@ -1,4 +1,8 @@
+--TODO: armor, fence, furnace, ladder, minecart stuff (oh yeah hoes and swords too ofc)
+
+--
 -- General recipes.
+--
 
 minetest.register_craft({
 	output = "minecraft:plank 4",
@@ -28,6 +32,31 @@ minetest.register_craft({
 	recipe = {
 		{"minecraft:coal"},
 		{"minecraft:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:bucket",
+	recipe = {
+		{"minecraft:iron_ingot", "", "minecraft:iron_ingot"},
+		{"", "minecraft:iron_ingot", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:flint_and_steel",
+	recipe = {
+		{"minecraft:iron_ingot", ""},
+		{"", "minecraft:flint"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:painting",
+	recipe = {
+		{"minecraft:stick", "minecraft:stick", "minecraft:stick"},
+		{"minecraft:stick", "minecraft:wool", "minecraft:stick"},
+		{"minecraft:stick", "minecraft:stick", "minecraft:stick"},
 	}
 })
 
@@ -96,6 +125,24 @@ for k, v in pairs(tool_data) do
 	})
 end
 
+minetest.register_craft({
+	output = "minecraft:bow",
+	recipe = {
+		{"", "minecraft:stick", "minecraft:string"},
+		{"minecraft:stick", "", "minecraft:string"},
+		{"", "minecraft:stick", "minecraft:string"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:arrow",
+	recipe = {
+		{"minecraft:flint"},
+		{"minecraft:stick"},
+		{"minecraft:feather"},
+	}
+})
+
 --
 -- Material blocks (back and forth)
 --
@@ -126,3 +173,106 @@ for k, v in pairs(material_blocks) do
 		}
 	})
 end
+
+--
+-- Food
+--
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "minecraft:mushroom_stew",
+	recipe = {
+		"minecraft:mushroom",
+		"minecraft:mushroom2",
+		"minecraft:bowl"
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:bowl",
+	recipe = {
+		{"minecraft:plank", "", "minecraft:plank"},
+		{"", "minecraft:plank", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:bread",
+	recipe = {
+		{"minecraft:wheat", "minecraft:wheat", "minecraft:wheat"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:golden_apple",
+	recipe = {
+		{"minecraft:block_of_gold", "minecraft:block_of_gold", "minecraft:block_of_gold"},
+		{"minecraft:block_of_gold", "minecraft:apple", "minecraft:block_of_gold"},
+		{"minecraft:block_of_gold", "minecraft:block_of_gold", "minecraft:block_of_gold"},
+	}
+})
+
+--
+-- Blocks
+--
+
+minetest.register_craft({
+	output = "minecraft:chest",
+	recipe = {
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+		{"minecraft:plank", "", "minecraft:plank"},
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:tnt",
+	recipe = {
+		{"minecraft:gunpowder", "minecraft:sand", "minecraft:gunpowder"},
+		{"minecraft:sand", "minecraft:gunpowder", "minecraft:sand"},
+		{"minecraft:gunpowder", "minecraft:sand", "minecraft:gunpowder"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:wool",
+	recipe = {
+		{"minecraft:string", "minecraft:string", "minecraft:string"},
+		{"minecraft:string", "minecraft:string", "minecraft:string"},
+		{"minecraft:string", "minecraft:string", "minecraft:string"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:cobble_slab 3",
+	recipe = {
+		{"minecraft:cobble", "minecraft:cobble", "minecraft:cobble"}
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:sign",
+	recipe = {
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+		{"", "minecraft:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:plank_stairs 4",
+	recipe = {
+		{"minecraft:plank", "", ""},
+		{"minecraft:plank", "minecraft:plank", ""},
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+	}
+})
+
+minetest.register_craft({
+	output = "minecraft:cobble_stairs 4",
+	recipe = {
+		{"minecraft:cobble", "", ""},
+		{"minecraft:cobble", "minecraft:cobble", ""},
+		{"minecraft:cobble", "minecraft:cobble", "minecraft:cobble"},
+	}
+})

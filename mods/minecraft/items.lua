@@ -102,7 +102,7 @@ minetest.register_craftitem("minecraft:painting", {
 	inventory_image = "items.png^[sheet:16x16:10,1"
 })
 
-minetest.register_craftitem("minecraft:", {
+minetest.register_craftitem("minecraft:arrow", {
 	description = "Arrow",
 	inventory_image = "items.png^[sheet:16x16:5,2"
 })
