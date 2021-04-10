@@ -460,7 +460,7 @@ minetest.register_node("minecraft:mushroom2", {
 minetest.register_node("minecraft:wool", {
 	description = "Wool",
     tiles = {"terrain.png^[sheet:16x16:0,4"},
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3,wood}
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3}
 })
 
 minetest.register_node("minecraft:spawner", {
