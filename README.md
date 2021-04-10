@@ -1,5 +1,8 @@
-<h1 align="center">Minecraftn't</h1>
-<img align="center" src=https://i.imgur.com/xnGs513.png">
+<p align="center"><img width=600 src="https://raw.githubusercontent.com/danil275487/minecraftnt/main/menu/header.png"></p>
+
+---
+
+<p align="center"><img src="https://i.imgur.com/xnGs513.png"></p>
 
 An attempt to recreate Minecraft Alpha 1.0.0 (inf-20100630-2) in Minetest.
 
