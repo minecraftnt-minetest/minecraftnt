@@ -95,3 +95,34 @@ for k, v in pairs(tool_data) do
 		}
 	})
 end
+
+--
+-- Material blocks (back and forth)
+--
+
+material_blocks = {
+	iron_ingot = "iron",
+	gold_ingot = "gold",
+	diamond = "diamond"
+}
+
+for k, v in pairs(material_blocks) do
+	s = "minecraft:"..k
+	o = "minecraft:block_of_"..v
+
+	minetest.register_craft({
+		output = o,
+		recipe = {
+			{s, s, s},
+			{s, s, s},
+			{s, s, s},
+		}
+	})
+
+	minetest.register_craft({
+		output = s.." 9",
+		recipe = {
+			{o}
+		}
+	})
+end
