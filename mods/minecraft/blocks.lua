@@ -265,7 +265,7 @@ minetest.register_node("minecraft:gold_block", {
 	groups = {cracky=2,level=1},
 })
 
-minetest.register_node("minecraft:diamond_Block", {
+minetest.register_node("minecraft:diamond_block", {
 	description = "Block of Diamond",
 	tiles = {
         "terrain.png^[sheet:16x16:8,1",    -- y+
@@ -293,31 +293,61 @@ minetest.register_node("minecraft:crafting_table", {
 		player:get_inventory():set_size("craft", 9)
 
 		local form = [[
-			size[9,8.75]
-			image[4.7,1.5;1.5,1;arrow.png]
-			list[current_player;main;0,4.5;9,3;9]
-			list[current_player;main;0,7.74;9,1;]
-			list[current_player;craft;1.75,0.5;3,3;]
-			list[current_player;craftpreview;6.1,1.5;1,1;]
-			listring[current_player;main]
-			listring[current_player;craft]
+			size[9.5,9]
+			real_coordinates[true]
+			bgcolor[black;neither]
+			listcolors[#ffffff00;#ffffff80]
+			image[0,0;9.5,9;crafting.png]
+			list[current_player;craft;1.5,0.75;1,1;0]
+			list[current_player;craft;3.5,2.75;1,1;8]
+			list[current_player;craft;2.5,2.75;1,1;7]
+			list[current_player;craft;3.5,1.75;1,1;5]
+			list[current_player;craft;2.5,1.75;1,1;4]
+			list[current_player;craft;3.5,0.75;1,1;2]
+			list[current_player;craft;2.5,0.75;1,1;1]
+			list[current_player;craft;1.5,1.75;1,1;3]
+			list[current_player;craft;1.5,2.75;1,1;6]
+			list[current_player;main;0.25,7.75;1,1;0]
+			list[current_player;main;1.25,7.75;1,1;1]
+			list[current_player;main;2.25,7.75;1,1;2]
+			list[current_player;main;3.25,7.75;1,1;3]
+			list[current_player;main;4.25,7.75;1,1;4]
+			list[current_player;main;5.25,7.75;1,1;5]
+			list[current_player;main;6.25,7.75;1,1;6]
+			list[current_player;main;7.25,7.75;1,1;7]
+			list[current_player;main;8.25,7.75;1,1;8]
+			list[current_player;main;0.25,4.5;1,1;9]
+			list[current_player;main;1.25,4.5;1,1;10]
+			list[current_player;main;2.25,4.5;1,1;11]
+			list[current_player;main;3.25,4.5;1,1;12]
+			list[current_player;main;4.25,4.5;1,1;13]
+			list[current_player;main;5.25,4.5;1,1;14]
+			list[current_player;main;6.25,4.5;1,1;15]
+			list[current_player;main;7.25,4.5;1,1;16]
+			list[current_player;main;8.25,4.5;1,1;17]
+			list[current_player;main;0.25,5.5;1,1;18]
+			list[current_player;main;1.25,5.5;1,1;19]
+			list[current_player;main;2.25,5.5;1,1;20]
+			list[current_player;main;3.25,5.5;1,1;21]
+			list[current_player;main;4.25,5.5;1,1;22]
+			list[current_player;main;5.25,5.5;1,1;23]
+			list[current_player;main;6.25,5.5;1,1;24]
+			list[current_player;main;7.25,5.5;1,1;25]
+			list[current_player;main;8.25,5.5;1,1;26]
+			list[current_player;main;0.25,6.5;1,1;27]
+			list[current_player;main;1.25,6.5;1,1;28]
+			list[current_player;main;2.25,6.5;1,1;29]
+			list[current_player;main;3.25,6.5;1,1;30]
+			list[current_player;main;4.25,6.5;1,1;31]
+			list[current_player;main;5.25,6.5;1,1;32]
+			list[current_player;main;6.25,6.5;1,1;33]
+			list[current_player;main;7.25,6.5;1,1;34]
+			list[current_player;main;8.25,6.5;1,1;35]
+			list[current_player;craftpreview;6.75,1.75;1,1;0]
 		]]
 
 		minetest.show_formspec(player:get_player_name(), "main", form)
 	end,
-})
-
-minetest.register_node("minecraft:chest", {
-	description = "Chest",
-	paramtype2 = "facedir",
-	tiles = {"terrain.png^[sheet:16x16:9,1",
-			 "terrain.png^[sheet:16x16:9,1",
-			 "terrain.png^[sheet:16x16:10,1",
-			 "terrain.png^[sheet:16x16:10,1",
-			 "terrain.png^[sheet:16x16:10,1",
-			 "terrain.png^[sheet:16x16:11,1",},
-	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
 })
 
 minetest.register_node("minecraft:furnace", {
