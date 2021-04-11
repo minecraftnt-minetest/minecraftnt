@@ -9,3 +9,6 @@ An attempt to recreate Minecraft Alpha 1.0.0 (inf-20100630-2) in Minetest.
 ## [Download Latest Commit](https://github.com/danil275487/minecraftnt/archive/refs/heads/main.zip)
 
 Requires Minetest 5.4.0.
+
+## License
+The code is licensed under the LGPL v2.1. Assets that aren't from Minecraft (and are therefor copyright Mojang AB) are licensed under CC BY-SA 3.0.
