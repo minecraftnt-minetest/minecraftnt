@@ -3,7 +3,7 @@
 --
 
 function get_furnace_active_formspec(fuel_percent, item_percent)
-	return 
+	return
 	"size[9.5,9]"..
 	"real_coordinates[true]"..
 	"bgcolor[black;neither]"..

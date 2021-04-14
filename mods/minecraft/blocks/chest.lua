@@ -36,8 +36,8 @@ end
 --[[ List of open chests.
 Key: Player name
 Value:
-    If player is using a chest: { pos = <chest node position> }
-    Otherwise: nil ]]
+	If player is using a chest: { pos = <chest node position> }
+	Otherwise: nil ]]
 local open_chests = {}
 
 -- To be called if a player opened a chest

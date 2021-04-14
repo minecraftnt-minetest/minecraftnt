@@ -7,7 +7,7 @@ minetest.register_node("minecraft:stone", {
 
 minetest.register_node("minecraft:grass", {
 	description = "Grass",
-    drop = "minecraft:dirt",
+	drop = "minecraft:dirt",
 	tiles ={"terrain.png^[sheet:16x16:0,0", "terrain.png^[sheet:16x16:2,0",
 		{name = "terrain.png^[sheet:16x16:3,0",
 		tileable_vertical = false}},
@@ -53,14 +53,14 @@ minetest.register_node("minecraft:plank", {
 })
 
 minetest.register_node("minecraft:glass", {
-    description = "Glass",
-    drawtype = "glasslike",
+	description = "Glass",
+	drawtype = "glasslike",
 	drop = "",
-    tiles = {"terrain.png^[sheet:16x16:1,3"},
-    paramtype = "light",
-    is_ground_content = false,
-    sunlight_propagates = true,
-    groups = {cracky=3,oddly_breakable_by_hand=3},
+	tiles = {"terrain.png^[sheet:16x16:1,3"},
+	paramtype = "light",
+	is_ground_content = false,
+	sunlight_propagates = true,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
 })
 
 minetest.register_node("minecraft:sand", {
@@ -203,13 +203,13 @@ minetest.register_node("minecraft:cobble_slab", {
 minetest.register_node("minecraft:stone_slab", {
 	description = "Stone Slab",
 	tiles = {
-        "terrain.png^[sheet:16x16:6,0",    -- y+
-        "terrain.png^[sheet:16x16:6,0",  -- y-
-        "terrain.png^[sheet:16x16:5,0", -- x+
-        "terrain.png^[sheet:16x16:5,0",  -- x-
-        "terrain.png^[sheet:16x16:5,0",  -- z+
-        "terrain.png^[sheet:16x16:5,0", -- z-
-    },
+		"terrain.png^[sheet:16x16:6,0",    -- y+
+		"terrain.png^[sheet:16x16:6,0",  -- y-
+		"terrain.png^[sheet:16x16:5,0", -- x+
+		"terrain.png^[sheet:16x16:5,0",  -- x-
+		"terrain.png^[sheet:16x16:5,0",  -- z+
+		"terrain.png^[sheet:16x16:5,0", -- z-
+	},
 	is_ground_content = false,
 	groups = {cracky=3},
 	drawtype = "nodebox",
@@ -225,13 +225,13 @@ minetest.register_node("minecraft:stone_slab", {
 minetest.register_node("minecraft:stone_slab_block", {
 	description = "tile.stoneSlab",
 	tiles = {
-        "terrain.png^[sheet:16x16:6,0",    -- y+
-        "terrain.png^[sheet:16x16:6,0",  -- y-
-        "terrain.png^[sheet:16x16:5,0", -- x+
-        "terrain.png^[sheet:16x16:5,0",  -- x-
-        "terrain.png^[sheet:16x16:5,0",  -- z+
-        "terrain.png^[sheet:16x16:5,0", -- z-
-    },
+		"terrain.png^[sheet:16x16:6,0",    -- y+
+		"terrain.png^[sheet:16x16:6,0",  -- y-
+		"terrain.png^[sheet:16x16:5,0", -- x+
+		"terrain.png^[sheet:16x16:5,0",  -- x-
+		"terrain.png^[sheet:16x16:5,0",  -- z+
+		"terrain.png^[sheet:16x16:5,0", -- z-
+	},
 	is_ground_content = false,
 	groups = {cracky=3},
 	drop = "minecraft:stone_slab"
@@ -242,39 +242,39 @@ minetest.register_node("minecraft:stone_slab_block", {
 minetest.register_node("minecraft:iron_block", {
 	description = "Block of Iron",
 	tiles = {
-        "terrain.png^[sheet:16x16:6,1",    -- y+
-        "terrain.png^[sheet:16x16:6,3",  -- y-
-        "terrain.png^[sheet:16x16:6,2", -- x+
-        "terrain.png^[sheet:16x16:6,2",  -- x-
-        "terrain.png^[sheet:16x16:6,2",  -- z+
-        "terrain.png^[sheet:16x16:6,2", -- z-
-    },
+		"terrain.png^[sheet:16x16:6,1",    -- y+
+		"terrain.png^[sheet:16x16:6,3",  -- y-
+		"terrain.png^[sheet:16x16:6,2", -- x+
+		"terrain.png^[sheet:16x16:6,2",  -- x-
+		"terrain.png^[sheet:16x16:6,2",  -- z+
+		"terrain.png^[sheet:16x16:6,2", -- z-
+	},
 	groups = {cracky=2,level=1},
 })
 
 minetest.register_node("minecraft:gold_block", {
 	description = "Block of Gold",
 	tiles = {
-        "terrain.png^[sheet:16x16:7,1",    -- y+
-        "terrain.png^[sheet:16x16:7,3",  -- y-
-        "terrain.png^[sheet:16x16:7,2", -- x+
-        "terrain.png^[sheet:16x16:7,2",  -- x-
-        "terrain.png^[sheet:16x16:7,2",  -- z+
-        "terrain.png^[sheet:16x16:7,2", -- z-
-    },
+		"terrain.png^[sheet:16x16:7,1",    -- y+
+		"terrain.png^[sheet:16x16:7,3",  -- y-
+		"terrain.png^[sheet:16x16:7,2", -- x+
+		"terrain.png^[sheet:16x16:7,2",  -- x-
+		"terrain.png^[sheet:16x16:7,2",  -- z+
+		"terrain.png^[sheet:16x16:7,2", -- z-
+	},
 	groups = {cracky=2,level=1},
 })
 
 minetest.register_node("minecraft:diamond_block", {
 	description = "Block of Diamond",
 	tiles = {
-        "terrain.png^[sheet:16x16:8,1",    -- y+
-        "terrain.png^[sheet:16x16:8,3",  -- y-
-        "terrain.png^[sheet:16x16:8,2", -- x+
-        "terrain.png^[sheet:16x16:8,2",  -- x-
-        "terrain.png^[sheet:16x16:8,2",  -- z+
-        "terrain.png^[sheet:16x16:8,2", -- z-
-    },
+		"terrain.png^[sheet:16x16:8,1",    -- y+
+		"terrain.png^[sheet:16x16:8,3",  -- y-
+		"terrain.png^[sheet:16x16:8,2", -- x+
+		"terrain.png^[sheet:16x16:8,2",  -- x-
+		"terrain.png^[sheet:16x16:8,2",  -- z+
+		"terrain.png^[sheet:16x16:8,2", -- z-
+	},
 	groups = {cracky=1,level=2},
 })
 
@@ -383,57 +383,57 @@ minetest.register_node("minecraft:farmland", {
 
 minetest.register_node("minecraft:sapling", {
 	description = "Sapling",
-    drawtype = "plantlike",
+	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:15,0"},
+	tiles = {"terrain.png^[sheet:16x16:15,0"},
 	groups = {dig_immediate=2,snappy=3},
 	inventory_image = "terrain.png^[sheet:16x16:15,0"
 })
 
 minetest.register_node("minecraft:flower", {
 	description = "Flower",
-    drawtype = "plantlike",
+	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:13,0"},
+	tiles = {"terrain.png^[sheet:16x16:13,0"},
 	groups = {dig_immediate=2,snappy=3},
 	inventory_image = "terrain.png^[sheet:16x16:13,0"
 })
 
 minetest.register_node("minecraft:rose", {
 	description = "Rose",
-    drawtype = "plantlike",
+	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:12,0"},
+	tiles = {"terrain.png^[sheet:16x16:12,0"},
 	groups = {dig_immediate=2,snappy=3},
 	inventory_image = "terrain.png^[sheet:16x16:12,0"
 })
 
 minetest.register_node("minecraft:mushroom", {
 	description = "Mushroom",
-    drawtype = "plantlike",
+	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:12,1"},
+	tiles = {"terrain.png^[sheet:16x16:12,1"},
 	groups = {dig_immediate=2},
 	inventory_image = "terrain.png^[sheet:16x16:12,1"
 })
 
 minetest.register_node("minecraft:mushroom2", {
 	description = "Mushroom",
-    drawtype = "plantlike",
+	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
-    tiles = {"terrain.png^[sheet:16x16:13,1"},
+	tiles = {"terrain.png^[sheet:16x16:13,1"},
 	groups = {dig_immediate=2},
 	inventory_image = "terrain.png^[sheet:16x16:13,1"
 })
 
 minetest.register_node("minecraft:wool", {
 	description = "Wool",
-    tiles = {"terrain.png^[sheet:16x16:0,4"},
+	tiles = {"terrain.png^[sheet:16x16:0,4"},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3}
 })
 

@@ -90,29 +90,29 @@ minetest.register_node("minecraft:water_flowing", {
 minetest.register_node("minecraft:lava_flowing", {
 	description = "Flowing Lava",
 	drawtype = "flowingliquid",
-    tiles = {"lava_flow.png"},
-    special_tiles = {
-        {
-            name = "lava_flow.png",
-            backface_culling = false,
-            animation = {
-                type = "vertical_frames",
-                aspect_w = 1,
-                aspect_h = 1,
-                length = 5,
-            },
-        },
-        {
-            name = "lava_flow.png",
-            backface_culling = true,
-            animation = {
-                type = "vertical_frames",
-                aspect_w = 1,
-                aspect_h = 1,
-                length = 5,
-            },
-        },
-    },
+	tiles = {"lava_flow.png"},
+	special_tiles = {
+		{
+			name = "lava_flow.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 1,
+				aspect_h = 1,
+				length = 5,
+			},
+		},
+		{
+			name = "lava_flow.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 1,
+				aspect_h = 1,
+				length = 5,
+			},
+		},
+	},
 	paramtype = "light",
 	light_source = minetest.LIGHT_MAX,
 	walkable = false,
