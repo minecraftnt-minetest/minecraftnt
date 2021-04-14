@@ -69,12 +69,14 @@ minetest.register_craftitem("minecraft:seeds", {
 
 minetest.register_craftitem("minecraft:apple", {
 	description = "Apple",
-	inventory_image = "items.png^[sheet:16x16:10,0"
+	inventory_image = "items.png^[sheet:16x16:10,0",
+	on_use = minetest.item_eat(4),
 })
 
 minetest.register_craftitem("minecraft:golden_apple", {
 	description = "Golden Apple",
-	inventory_image = "items.png^[sheet:16x16:11,0"
+	inventory_image = "items.png^[sheet:16x16:11,0",
+	on_use = minetest.item_eat(20),
 })
 
 minetest.register_craftitem("minecraft:bow", {
@@ -119,7 +121,8 @@ minetest.register_craftitem("minecraft:gunpowder", {
 
 minetest.register_craftitem("minecraft:bread", {
 	description = "Bread",
-	inventory_image = "items.png^[sheet:16x16:9,2"
+	inventory_image = "items.png^[sheet:16x16:9,2",
+	on_use = minetest.item_eat(5),
 })
 
 minetest.register_craftitem("minecraft:sign", {
@@ -134,7 +137,7 @@ minetest.register_craftitem("minecraft:stick", {
 
 minetest.register_craftitem("minecraft:diamond", {
 	description = "Diamond",
-	inventory_image = "items.png^[sheet:16x16:7,3"
+	inventory_image = "items.png^[sheet:16x16:7,3",
 })
 
 minetest.register_craftitem("minecraft:bowl", {
@@ -144,7 +147,8 @@ minetest.register_craftitem("minecraft:bowl", {
 
 minetest.register_craftitem("minecraft:mushroom_stew", {
 	description = "Mushroom Stew",
-	inventory_image = "items.png^[sheet:16x16:8,4"
+	inventory_image = "items.png^[sheet:16x16:8,4",
+	on_use = minetest.item_eat(10, "minecraft:bowl"),
 })
 
 minetest.register_craftitem("minecraft:bucket", {
@@ -164,12 +168,14 @@ minetest.register_craftitem("minecraft:lava_bucket", {
 
 minetest.register_craftitem("minecraft:raw_porkchop", {
 	description = "Raw Porkchop",
-	inventory_image = "items.png^[sheet:16x16:7,5"
+	inventory_image = "items.png^[sheet:16x16:7,5",
+	on_use = minetest.item_eat(3),
 })
 
 minetest.register_craftitem("minecraft:cooked_porkchop", {
 	description = "Cooked Porkchop",
-	inventory_image = "items.png^[sheet:16x16:8,5"
+	inventory_image = "items.png^[sheet:16x16:8,5",
+	on_use = minetest.item_eat(8),
 })
 
 minetest.register_craftitem("minecraft:saddle", {

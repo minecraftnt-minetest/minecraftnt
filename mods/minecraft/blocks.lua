@@ -350,32 +350,6 @@ minetest.register_node("minecraft:crafting_table", {
 	end,
 })
 
-minetest.register_node("minecraft:furnace", {
-	description = "Furnace",
-	paramtype2 = "facedir",
-	tiles = {"terrain.png^[sheet:16x16:1,0",
-			 "terrain.png^[sheet:16x16:1,0",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:12,2",},
-	is_ground_content = false,
-	groups = {cracky=3},
-})
-
-minetest.register_node("minecraft:lit_furnace", {
-	description = "Furnace",
-	paramtype2 = "facedir",
-	tiles = {"terrain.png^[sheet:16x16:1,0",
-			 "terrain.png^[sheet:16x16:1,0",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:13,2",
-			 "terrain.png^[sheet:16x16:13,3",},
-	is_ground_content = false,
-	groups = {cracky=3},
-})
-
 minetest.register_node("minecraft:obsidian", {
 	description = "Obsidian",
 	tiles = {"terrain.png^[sheet:16x16:5,2"},
@@ -473,8 +447,30 @@ minetest.register_node("minecraft:spawner", {
 	drop = "",
 })
 
+minetest.register_node("minecraft:ladder", {
+	description = "Ladder",
+	drawtype = "signlike",
+	tiles = {"terrain.png^[sheet:16x16:1,4"},
+	inventory_image = "terrain.png^[sheet:16x16:1,4",
+	wield_image = "terrain.png^[sheet:16x16:1,4",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	climbable = true,
+	is_ground_content = false,
+	selection_box = {
+		type = "wallmounted",
+		--wall_top = = <default>
+		--wall_bottom = = <default>
+		--wall_side = = <default>
+	},
+	groups = {choppy = 2, oddly_breakable_by_hand = 3},
+})
+
 -- More blocks that are in their separate code file.
 
 dofile(minetest.get_modpath("minecraft") .. "/blocks/chest.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/liquids.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
+dofile(minetest.get_modpath("minecraft") .. "/blocks/furnace.lua")
