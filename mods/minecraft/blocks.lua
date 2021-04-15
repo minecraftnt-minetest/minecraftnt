@@ -140,7 +140,7 @@ minetest.register_node("minecraft:plank_stairs", {
 	description = "Wooden Stairs",
 	tiles = {"terrain.png^[sheet:16x16:4,0"},
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
+	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -174,7 +174,7 @@ minetest.register_node("minecraft:plank_slab", {
 	description = "Wooden Slab",
 	tiles = {"terrain.png^[sheet:16x16:4,0"},
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
+	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	node_box = {
