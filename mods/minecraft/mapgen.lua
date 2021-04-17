@@ -71,4 +71,5 @@ minetest.register_decoration({
 	rotation = "random",
 })
 
+dofile(minetest.get_modpath("minecraft") .. "/mapgen/bedrock.lua")
 dofile(minetest.get_modpath("minecraft") .. "/mapgen/ores.lua")
