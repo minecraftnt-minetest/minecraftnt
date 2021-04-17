@@ -447,30 +447,10 @@ minetest.register_node("minecraft:spawner", {
 	drop = "",
 })
 
-minetest.register_node("minecraft:ladder", {
-	description = "Ladder",
-	drawtype = "signlike",
-	tiles = {"terrain.png^[sheet:16x16:1,4"},
-	inventory_image = "terrain.png^[sheet:16x16:1,4",
-	wield_image = "terrain.png^[sheet:16x16:1,4",
-	paramtype = "light",
-	paramtype2 = "wallmounted",
-	sunlight_propagates = true,
-	walkable = false,
-	climbable = true,
-	is_ground_content = false,
-	selection_box = {
-		type = "wallmounted",
-		--wall_top = = <default>
-		--wall_bottom = = <default>
-		--wall_side = = <default>
-	},
-	groups = {choppy = 2, oddly_breakable_by_hand = 3},
-})
-
 -- More blocks that are in their separate code file.
 
 dofile(minetest.get_modpath("minecraft") .. "/blocks/chest.lua")
+dofile(minetest.get_modpath("minecraft") .. "/blocks/furnace.lua")
+dofile(minetest.get_modpath("minecraft") .. "/blocks/ladder.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/liquids.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
-dofile(minetest.get_modpath("minecraft") .. "/blocks/furnace.lua")
