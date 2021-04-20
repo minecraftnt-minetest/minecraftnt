@@ -64,7 +64,10 @@ minetest.register_craftitem("minecraft:string", {
 
 minetest.register_craftitem("minecraft:seeds", {
 	description = "Seeds",
-	inventory_image = "items.png^[sheet:16x16:9,0"
+	inventory_image = "items.png^[sheet:16x16:9,0",
+	on_place = function(itemstack, placer, pointed_thing)
+		return farming:place_seed(itemstack, placer, pointed_thing, "minecraft:wheatblock_1")
+	end
 })
 
 minetest.register_craftitem("minecraft:apple", {
@@ -174,4 +177,5 @@ minetest.register_craftitem("minecraft:minecart", {
 })
 
 dofile(minetest.get_modpath("minecraft") .. "/items/buckets.lua")
+dofile(minetest.get_modpath("minecraft") .. "/items/hoes.lua")
 dofile(minetest.get_modpath("minecraft") .. "/items/tools.lua")

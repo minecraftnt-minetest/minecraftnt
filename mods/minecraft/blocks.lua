@@ -11,13 +11,13 @@ minetest.register_node("minecraft:grass", {
 	tiles ={"terrain.png^[sheet:16x16:0,0", "terrain.png^[sheet:16x16:2,0",
 		{name = "terrain.png^[sheet:16x16:3,0",
 		tileable_vertical = false}},
-	groups = {crumbly=3, soil=1},
+	groups = {crumbly=3, soil=1, cultivatable=1},
 })
 
 minetest.register_node("minecraft:dirt", {
 	description = "Dirt",
 	tiles ={"terrain.png^[sheet:16x16:2,0"},
-	groups = {crumbly=3, soil=1},
+	groups = {crumbly=3, soil=1, cultivatable=1},
 })
 
 minetest.register_node("minecraft:oak", {
@@ -365,22 +365,6 @@ minetest.register_node("minecraft:tnt", {
 	groups = {dig_immediate=2}
 })
 
-minetest.register_node("minecraft:wet_farmland", {
-	description = "Farmland",
-	tiles ={"terrain.png^[sheet:16x16:6,5",
-			"terrain.png^[sheet:16x16:2,0",
-			"terrain.png^[sheet:16x16:2,0",},
-	groups = {crumbly=3},
-})
-
-minetest.register_node("minecraft:farmland", {
-	description = "Farmland",
-	tiles ={"terrain.png^[sheet:16x16:7,5",
-			"terrain.png^[sheet:16x16:2,0",
-			"terrain.png^[sheet:16x16:2,0",},
-	groups = {crumbly=3},
-})
-
 minetest.register_node("minecraft:flower", {
 	description = "Flower",
 	drawtype = "plantlike",
@@ -444,7 +428,9 @@ minetest.register_node("minecraft:spawner", {
 -- More blocks that are in their separate code file.
 
 dofile(minetest.get_modpath("minecraft") .. "/blocks/chest.lua")
+dofile(minetest.get_modpath("minecraft") .. "/blocks/farmland.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/furnace.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/ladder.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/liquids.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
+dofile(minetest.get_modpath("minecraft") .. "/blocks/wheat.lua")

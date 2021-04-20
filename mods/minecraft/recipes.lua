@@ -123,6 +123,26 @@ for k, v in pairs(tool_data) do
 			{"", "minecraft:stick"},
 		}
 	})
+
+	-- Hoes
+	minetest.register_craft({
+		output = v['output'].."hoe",
+		recipe = {
+			{v['material'], v['material']},
+			{"minecraft:stick", ""},
+			{"minecraft:stick", ""},
+		}
+	})
+
+	-- Hoes (Mirrored)
+	minetest.register_craft({
+		output = v['output'].."hoe",
+		recipe = {
+			{v['material'], v['material']},
+			{"", "minecraft:stick"},
+			{"", "minecraft:stick"},
+		}
+	})
 end
 
 minetest.register_craft({
