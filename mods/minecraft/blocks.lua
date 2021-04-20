@@ -370,7 +370,7 @@ minetest.register_node("minecraft:wet_farmland", {
 	tiles ={"terrain.png^[sheet:16x16:6,5",
 			"terrain.png^[sheet:16x16:2,0",
 			"terrain.png^[sheet:16x16:2,0",},
-	groups = {crumbly=3, soil=1},
+	groups = {crumbly=3},
 })
 
 minetest.register_node("minecraft:farmland", {
@@ -378,17 +378,7 @@ minetest.register_node("minecraft:farmland", {
 	tiles ={"terrain.png^[sheet:16x16:7,5",
 			"terrain.png^[sheet:16x16:2,0",
 			"terrain.png^[sheet:16x16:2,0",},
-	groups = {crumbly=3, soil=1},
-})
-
-minetest.register_node("minecraft:sapling", {
-	description = "Sapling",
-	drawtype = "plantlike",
-	paramtype = "light",
-	walkable = false,
-	tiles = {"terrain.png^[sheet:16x16:15,0"},
-	groups = {dig_immediate=2,snappy=3},
-	inventory_image = "terrain.png^[sheet:16x16:15,0"
+	groups = {crumbly=3},
 })
 
 minetest.register_node("minecraft:flower", {

@@ -293,6 +293,15 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "minecraft:ladder",
+	recipe = {
+		{"minecraft:stick", "", "minecraft:stick"},
+		{"minecraft:stick", "minecraft:stick", "minecraft:stick"},
+		{"minecraft:stick", "", "minecraft:stick"},
+	}
+})
+
 --
 -- Fuels
 --

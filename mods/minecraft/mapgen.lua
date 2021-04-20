@@ -56,20 +56,6 @@ minetest.register_decoration({
 	decoration = "minecraft:flower",
 })
 
-
-minetest.register_decoration({
-	name = "minecraft:tree",
-	deco_type = "schematic",
-	place_on = {"minecraft:grass"},
-	sidelen = 16,
-	fill_ratio = 0.001,
-	biomes = {"grasslands"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = minetest.get_modpath("minecraft") .. "/schematics/tree.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
 dofile(minetest.get_modpath("minecraft") .. "/mapgen/bedrock.lua")
 dofile(minetest.get_modpath("minecraft") .. "/mapgen/ores.lua")
+dofile(minetest.get_modpath("minecraft") .. "/mapgen/trees.lua")
