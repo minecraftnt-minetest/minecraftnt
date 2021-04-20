@@ -386,8 +386,9 @@ minetest.register_node("minecraft:flower", {
 	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
+	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:13,0"},
-	groups = {dig_immediate=2,snappy=3},
+	groups = {dig_immediate=2,snappy=3,attached_node = 1},
 	inventory_image = "terrain.png^[sheet:16x16:13,0"
 })
 
@@ -396,8 +397,9 @@ minetest.register_node("minecraft:rose", {
 	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
+	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:12,0"},
-	groups = {dig_immediate=2,snappy=3},
+	groups = {dig_immediate=2,snappy=3,attached_node = 1},
 	inventory_image = "terrain.png^[sheet:16x16:12,0"
 })
 
@@ -406,8 +408,9 @@ minetest.register_node("minecraft:mushroom", {
 	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
+	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:12,1"},
-	groups = {dig_immediate=2},
+	groups = {dig_immediate=2,attached_node = 1},
 	inventory_image = "terrain.png^[sheet:16x16:12,1"
 })
 
@@ -416,8 +419,9 @@ minetest.register_node("minecraft:mushroom2", {
 	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
+	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:13,1"},
-	groups = {dig_immediate=2},
+	groups = {dig_immediate=2,attached_node = 1},
 	inventory_image = "terrain.png^[sheet:16x16:13,1"
 })
 
