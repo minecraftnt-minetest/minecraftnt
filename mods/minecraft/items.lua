@@ -151,21 +151,6 @@ minetest.register_craftitem("minecraft:mushroom_stew", {
 	on_use = minetest.item_eat(10, "minecraft:bowl"),
 })
 
-minetest.register_craftitem("minecraft:bucket", {
-	description = "Bucket",
-	inventory_image = "items.png^[sheet:16x16:10,4"
-})
-
-minetest.register_craftitem("minecraft:water_bucket", {
-	description = "Water Bucket",
-	inventory_image = "items.png^[sheet:16x16:11,4"
-})
-
-minetest.register_craftitem("minecraft:lava_bucket", {
-	description = "Lava Bucket",
-	inventory_image = "items.png^[sheet:16x16:12,4"
-})
-
 minetest.register_craftitem("minecraft:raw_porkchop", {
 	description = "Raw Porkchop",
 	inventory_image = "items.png^[sheet:16x16:7,5",
@@ -187,3 +172,6 @@ minetest.register_craftitem("minecraft:minecart", {
 	description = "Minecart",
 	inventory_image = "items.png^[sheet:16x16:7,8"
 })
+
+dofile(minetest.get_modpath("minecraft") .. "/items/buckets.lua")
+dofile(minetest.get_modpath("minecraft") .. "/items/tools.lua")
