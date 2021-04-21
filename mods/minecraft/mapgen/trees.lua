@@ -61,7 +61,7 @@ for k, v in pairs(trees) do
 		deco_type = "schematic",
 		place_on = {"minecraft:grass"},
 		sidelen = 16,
-		fill_ratio = 0.001,
+		fill_ratio = 0.002,
 		biomes = {"grasslands"},
 		y_max = 31000,
 		y_min = 1,
