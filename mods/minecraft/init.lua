@@ -12,3 +12,16 @@ minetest.register_on_dieplayer(function(entity, reason)
 		minetest.item_drop(ItemStack("minecraft:apple"), entity, entity:get_pos())
 	end
 end)
+
+minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack, pointed_thing)
+	-- Build limit
+	if pos.y > layer_to_y(128) then
+		minetest.remove_node(pos)
+		return true
+	end
+
+	-- Unlimited blocks in creative mode
+	if placer and placer:is_player() then
+		return minetest.is_creative_enabled(placer:get_player_name())
+	end
+end)
