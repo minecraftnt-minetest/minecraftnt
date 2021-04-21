@@ -4,16 +4,6 @@
 doors = {}
 
 doors.registered_doors = {}
-doors.registered_trapdoors = {}
-
-local function replace_old_owner_information(pos)
-	local meta = minetest.get_meta(pos)
-	local owner = meta:get_string("doors_owner")
-	if owner and owner ~= "" then
-		meta:set_string("owner", owner)
-		meta:set_string("doors_owner", "")
-	end
-end
 
 -- returns an object to a door object or nil
 function doors.get(pos)
@@ -42,31 +32,6 @@ function doors.get(pos)
 				return state %2 == 1
 			end
 		}
-	elseif doors.registered_trapdoors[node_name] then
-		-- A trapdoor
-		return {
-			pos = pos,
-			open = function(self, player)
-				if self:state() then
-					return false
-				end
-				return doors.trapdoor_toggle(self.pos, nil, player)
-			end,
-			close = function(self, player)
-				if not self:state() then
-					return false
-				end
-				return doors.trapdoor_toggle(self.pos, nil, player)
-			end,
-			toggle = function(self, player)
-				return doors.trapdoor_toggle(self.pos, nil, player)
-			end,
-			state = function(self)
-				return minetest.get_node(self.pos).name:sub(-5) == "_open"
-			end
-		}
-	else
-		return nil
 	end
 end
 
@@ -139,8 +104,6 @@ function doors.door_toggle(pos, node, clicker)
 	else
 		state = tonumber(state)
 	end
-
-	replace_old_owner_information(pos)
 
 	-- until Lua-5.2 we have no bitwise operators :(
 	if state % 2 == 1 then
@@ -314,15 +277,21 @@ function doors.register(name, def)
 	def.walkable = true
 	def.is_ground_content = false
 	def.buildable_to = false
-	def.selection_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
-	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
+	def.selection_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-5/16}}
+	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-5/16}}
 	def.use_texture_alpha = "clip"
 
 	def.mesh = "door_a.obj"
 	minetest.register_node(":" .. name .. "_a", def)
 
+	def.mesh = "door_b.obj"
+	minetest.register_node(":" .. name .. "_b", def)
+
 	def.mesh = "door_a2.obj"
 	minetest.register_node(":" .. name .. "_c", def)
+
+	def.mesh = "door_b2.obj"
+	minetest.register_node(":" .. name .. "_d", def)
 
 	doors.registered_doors[name .. "_a"] = true
 	doors.registered_doors[name .. "_b"] = true
