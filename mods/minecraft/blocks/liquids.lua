@@ -121,6 +121,7 @@ minetest.register_node("minecraft:lava_flowing", {
 	buildable_to = true,
 	is_ground_content = false,
 	drowning = 1,
+	liquid_range = 4,
 	damage_per_second = 6,
 	liquidtype = "flowing",
 	liquid_alternative_flowing = "minecraft:lava_flowing",
