@@ -10,7 +10,12 @@ local function create_soil(pos, inv)
 			node.name = "minecraft:farmland"
 			minetest.set_node(pos, node)
 			--minetest.sound_play("default_dig_crumbly", { pos = pos, gain = 0.5 }, true)
-			minetest.item_drop(ItemStack("minecraft:seeds"), nil, {x=pos.x, y=pos.y+1, z=pos.z})
+
+			-- 1/10 chance of dropping a seed item!
+			if math.random(10) == 10 then
+				minetest.item_drop(ItemStack("minecraft:seeds"), nil, {x=pos.x, y=pos.y+1, z=pos.z})
+			end
+
 			return true
 		end
 	end
