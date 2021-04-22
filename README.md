@@ -4,11 +4,11 @@
 
 <p align="center"><img src="https://i.imgur.com/xnGs513.png"></p>
 
-An attempt to recreate Minecraft Alpha (a1.0.0-a1.1.2) in Minetest.
+An attempt to recreate Minecraft inf-20100630-2, retroactively referred to as Alpha 1.0.0, in Minetest. (And a1.1.2 later down the line)
 
 ## [Download Latest Commit](https://github.com/danil275487/minecraftnt/archive/refs/heads/main.zip)
 
-Requires Minetest 5.4.0.
+The latest and greatest version of Minetest is always recommended (Currently Minetest 5.4). To get working sound and music, please run the `fetchassets.py` Python file to download sounds and music as it isn't provided in this source repository.
 
 ## License
 The code is licensed under the LGPL v2.1. Assets that aren't from Minecraft (and are therefor copyright Mojang AB) are licensed under CC BY-SA 3.0.
