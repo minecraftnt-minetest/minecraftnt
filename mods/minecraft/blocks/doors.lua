@@ -1,5 +1,24 @@
 -- doors/init.lua
 
+-- Register LBM that would replace old doors (from previous doors mod) into new doors
+
+doornodes = { 'hidden', 'door_a', 'door_b', 'door_c', 'door_d' }
+
+for k,v in ipairs(doornodes) do
+    minetest.log("Registering LBM "..v)
+    minetest.register_lbm({
+        label = "Upgrade old doors ("..v..")",
+        name = "minecraft:upgrade_old_doors_"..v,
+        nodenames = {"doors:"..v},
+        run_at_every_load = true,
+        action = function(pos, node)
+            minetest.log("Got old door at "..pos.x..","..pos.y..","..pos.z..", attempting to update it")
+            minetest.remove_node(pos)
+            minetest.set_node(pos, { name = "minecraft:"..v })
+        end,
+    })
+end
+
 -- our API object
 doors = {}
 
@@ -37,7 +56,7 @@ end
 
 -- this hidden node is placed on top of the bottom, and prevents
 -- nodes from being placed in the top half of the door.
-minetest.register_node("doors:hidden", {
+minetest.register_node("minecraft:hidden", {
 	description = "Hidden Door Segment",
 	drawtype = "airlike",
 	paramtype = "light",
@@ -154,7 +173,7 @@ end
 
 function doors.register(name, def)
 	if not name:find(":") then
-		name = "doors:" .. name
+		name = "minecraft:" .. name
 	end
 
 	minetest.register_craftitem(":" .. name, {
@@ -216,10 +235,10 @@ function doors.register(name, def)
 			if minetest.get_item_group(minetest.get_node(aside).name, "door") == 1 then
 				state = state + 2
 				minetest.set_node(pos, {name = name .. "_b", param2 = dir})
-				minetest.set_node(above, {name = "doors:hidden", param2 = (dir + 3) % 4})
+				minetest.set_node(above, {name = "minecraft:hidden", param2 = (dir + 3) % 4})
 			else
 				minetest.set_node(pos, {name = name .. "_a", param2 = dir})
-				minetest.set_node(above, {name = "doors:hidden", param2 = dir})
+				minetest.set_node(above, {name = "minecraft:hidden", param2 = dir})
 			end
 
 			local meta = minetest.get_meta(pos)
