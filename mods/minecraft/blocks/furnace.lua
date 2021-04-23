@@ -8,50 +8,17 @@ function get_furnace_active_formspec(fuel_percent, item_percent)
 	"real_coordinates[true]"..
 	"bgcolor[black;neither]"..
 	"listcolors[#ffffff00;#ffffff80]"..
+	"style_type[list;spacing=0,0]"..
 	"image[0,0;9.5,9;furnace.png]"..
+	"list[current_player;main;0.25,7.75;9,1;0]"..
+	"list[current_player;main;0.25,4.5;9,3;9]"..
 	"list[context;src;2.75,0.75;1,1;0]"..
 	"list[context;fuel;2.75,2.75;1,1;0]"..
-	"list[current_player;main;0.25,7.75;1,1;0]"..
-	"list[current_player;main;1.25,7.75;1,1;1]"..
-	"list[current_player;main;2.25,7.75;1,1;2]"..
-	"list[current_player;main;3.25,7.75;1,1;3]"..
-	"list[current_player;main;4.25,7.75;1,1;4]"..
-	"list[current_player;main;5.25,7.75;1,1;5]"..
-	"list[current_player;main;6.25,7.75;1,1;6]"..
-	"list[current_player;main;7.25,7.75;1,1;7]"..
-	"list[current_player;main;8.25,7.75;1,1;8]"..
-	"list[current_player;main;0.25,4.5;1,1;9]"..
-	"list[current_player;main;1.25,4.5;1,1;10]"..
-	"list[current_player;main;2.25,4.5;1,1;11]"..
-	"list[current_player;main;3.25,4.5;1,1;12]"..
-	"list[current_player;main;4.25,4.5;1,1;13]"..
-	"list[current_player;main;5.25,4.5;1,1;14]"..
-	"list[current_player;main;6.25,4.5;1,1;15]"..
-	"list[current_player;main;7.25,4.5;1,1;16]"..
-	"list[current_player;main;8.25,4.5;1,1;17]"..
-	"list[current_player;main;0.25,5.5;1,1;18]"..
-	"list[current_player;main;1.25,5.5;1,1;19]"..
-	"list[current_player;main;2.25,5.5;1,1;20]"..
-	"list[current_player;main;3.25,5.5;1,1;21]"..
-	"list[current_player;main;4.25,5.5;1,1;22]"..
-	"list[current_player;main;5.25,5.5;1,1;23]"..
-	"list[current_player;main;6.25,5.5;1,1;24]"..
-	"list[current_player;main;7.25,5.5;1,1;25]"..
-	"list[current_player;main;8.25,5.5;1,1;26]"..
-	"list[current_player;main;0.25,6.5;1,1;27]"..
-	"list[current_player;main;1.25,6.5;1,1;28]"..
-	"list[current_player;main;2.25,6.5;1,1;29]"..
-	"list[current_player;main;3.25,6.5;1,1;30]"..
-	"list[current_player;main;4.25,6.5;1,1;31]"..
-	"list[current_player;main;5.25,6.5;1,1;32]"..
-	"list[current_player;main;6.25,6.5;1,1;33]"..
-	"list[current_player;main;7.25,6.5;1,1;34]"..
-	"list[current_player;main;8.25,6.5;1,1;35]"..
+	"list[context;dst;6.25,1.75;1,1;0]"..
 	"image[2.75,1.75;1,1;furnace_fire_bg.png^[lowpart:"..
 	(fuel_percent)..":furnace_fire.png]"..
 	"image[4,1.75;1.75,1;furnace_arrow_bg.png^[lowpart:"..
 	(item_percent)..":furnace_arrow.png^[transformR270]"..
-	"list[context;dst;6.25,1.75;1,1;0]"..
 	"listring[context;dst]"..
 	"listring[current_player;main]"..
 	"listring[context;src]"..
@@ -66,48 +33,15 @@ function get_furnace_inactive_formspec()
 	"real_coordinates[true]"..
 	"bgcolor[black;neither]"..
 	"listcolors[#ffffff00;#ffffff80]"..
+	"style_type[list;spacing=0,0]"..
 	"image[0,0;9.5,9;furnace.png]"..
+	"list[current_player;main;0.25,7.75;9,1;0]"..
+	"list[current_player;main;0.25,4.5;9,3;9]"..
 	"list[context;src;2.75,0.75;1,1;0]"..
 	"list[context;fuel;2.75,2.75;1,1;0]"..
-	"list[current_player;main;0.25,7.75;1,1;0]"..
-	"list[current_player;main;1.25,7.75;1,1;1]"..
-	"list[current_player;main;2.25,7.75;1,1;2]"..
-	"list[current_player;main;3.25,7.75;1,1;3]"..
-	"list[current_player;main;4.25,7.75;1,1;4]"..
-	"list[current_player;main;5.25,7.75;1,1;5]"..
-	"list[current_player;main;6.25,7.75;1,1;6]"..
-	"list[current_player;main;7.25,7.75;1,1;7]"..
-	"list[current_player;main;8.25,7.75;1,1;8]"..
-	"list[current_player;main;0.25,4.5;1,1;9]"..
-	"list[current_player;main;1.25,4.5;1,1;10]"..
-	"list[current_player;main;2.25,4.5;1,1;11]"..
-	"list[current_player;main;3.25,4.5;1,1;12]"..
-	"list[current_player;main;4.25,4.5;1,1;13]"..
-	"list[current_player;main;5.25,4.5;1,1;14]"..
-	"list[current_player;main;6.25,4.5;1,1;15]"..
-	"list[current_player;main;7.25,4.5;1,1;16]"..
-	"list[current_player;main;8.25,4.5;1,1;17]"..
-	"list[current_player;main;0.25,5.5;1,1;18]"..
-	"list[current_player;main;1.25,5.5;1,1;19]"..
-	"list[current_player;main;2.25,5.5;1,1;20]"..
-	"list[current_player;main;3.25,5.5;1,1;21]"..
-	"list[current_player;main;4.25,5.5;1,1;22]"..
-	"list[current_player;main;5.25,5.5;1,1;23]"..
-	"list[current_player;main;6.25,5.5;1,1;24]"..
-	"list[current_player;main;7.25,5.5;1,1;25]"..
-	"list[current_player;main;8.25,5.5;1,1;26]"..
-	"list[current_player;main;0.25,6.5;1,1;27]"..
-	"list[current_player;main;1.25,6.5;1,1;28]"..
-	"list[current_player;main;2.25,6.5;1,1;29]"..
-	"list[current_player;main;3.25,6.5;1,1;30]"..
-	"list[current_player;main;4.25,6.5;1,1;31]"..
-	"list[current_player;main;5.25,6.5;1,1;32]"..
-	"list[current_player;main;6.25,6.5;1,1;33]"..
-	"list[current_player;main;7.25,6.5;1,1;34]"..
-	"list[current_player;main;8.25,6.5;1,1;35]"..
+	"list[context;dst;6.25,1.75;1,1;0]"..
 	"image[2.75,1.75;1,1;furnace_fire_bg.png]"..
 	"image[4,1.75;1.75,1;furnace_arrow_bg.png^[transformR270]"..
-	"list[context;dst;6.25,1.75;1,1;0]"..
 	"listring[context;dst]"..
 	"listring[current_player;main]"..
 	"listring[context;src]"..

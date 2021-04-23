@@ -225,12 +225,15 @@ minetest.register_node(small_name, {
 
 		minetest.show_formspec(clicker:get_player_name(),
 		"mcl_chests:chest_"..pos.x.."_"..pos.y.."_"..pos.z,
-		"size[9,8.75]"..
-		"label[0,0;"..minetest.formspec_escape(minetest.colorize("#313131", "Chest ee")).."]"..
-		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0,0.5;9,3;]"..
-		"label[0,4.0;"..minetest.formspec_escape(minetest.colorize("#313131", "Inventory")).."]"..
-		"list[current_player;main;0,4.5;9,3;9]"..
-		"list[current_player;main;0,7.74;9,1;]"..
+		"size[9.5,8.25]"..
+		"real_coordinates[true]"..
+		"bgcolor[black;neither]"..
+		"image[0,0;9.5,8.25;chest1.png]"..
+		"listcolors[#ffffff00;#ffffff80]"..
+		"style_type[list;spacing=0,0]"..
+		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0.25,0.25;9,3;]"..
+		"list[current_player;main;0.25,3.75;9,3;9]"..
+		"list[current_player;main;0.25,7;9,1;]"..
 		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main]"..
 		"listring[current_player;main]")
 
@@ -335,12 +338,11 @@ minetest.register_node(left_name, {
 		minetest.show_formspec(clicker:get_player_name(),
 		"mcl_chests:chest_"..pos.x.."_"..pos.y.."_"..pos.z,
 		"size[9,11.5]"..
-		"label[0,0;"..minetest.formspec_escape(minetest.colorize("#313131", "Large Chest")).."]"..
-		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0,0.5;9,3;]"..
-		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0,3.5;9,3;]"..
-		"label[0,7;"..minetest.formspec_escape(minetest.colorize("#313131", "Inventory")).."]"..
-		"list[current_player;main;0,7.5;9,3;9]"..
-		"list[current_player;main;0,10.75;9,1;]"..
+		"style_type[list;spacing=0,0]"..
+		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0.25,0.25;9,3;]"..
+		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0.25,3.25;9,3;]"..
+		"list[current_player;main;0.25,3.75;9,3;9]"..
+		"list[current_player;main;0.25,4.25;9,1;]"..
 		-- BEGIN OF LISTRING WORKAROUND
 		"listring[current_player;main]"..
 		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";input]"..
@@ -448,13 +450,16 @@ minetest.register_node(right_name, {
 		minetest.show_formspec(clicker:get_player_name(),
 		"mcl_chests:chest_"..pos.x.."_"..pos.y.."_"..pos.z,
 
-		"size[9,11.5]"..
-		"label[0,0;"..minetest.formspec_escape(minetest.colorize("#313131", "Large Chest")).."]"..
-		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0,0.5;9,3;]"..
-		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0,3.5;9,3;]"..
-		"label[0,7;"..minetest.formspec_escape(minetest.colorize("#313131", "Inventory")).."]"..
-		"list[current_player;main;0,7.5;9,3;9]"..
-		"list[current_player;main;0,10.75;9,1;]"..
+		"size[9.5,11.25]"..
+		"real_coordinates[true]"..
+		"bgcolor[black;neither]"..
+		"image[0,0;9.5,11.25;chest2.png]"..
+		"listcolors[#ffffff00;#ffffff80]"..
+		"style_type[list;spacing=0,0]"..
+		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0.25,0.25;9,3;]"..
+		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0.25,3.25;9,3;]"..
+		"list[current_player;main;0.25,6.75;9,3;9]"..
+		"list[current_player;main;0.25,10;9,1;]"..
 		-- BEGIN OF LISTRING WORKAROUND
 		"listring[current_player;main]"..
 		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";input]"..
