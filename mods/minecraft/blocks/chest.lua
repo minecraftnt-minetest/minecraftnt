@@ -337,20 +337,24 @@ minetest.register_node(left_name, {
 
 		minetest.show_formspec(clicker:get_player_name(),
 		"mcl_chests:chest_"..pos.x.."_"..pos.y.."_"..pos.z,
-		"size[9,11.5]"..
+		"size[9.5,11.25]"..
+		"real_coordinates[true]"..
+		"bgcolor[black;neither]"..
+		"image[0,0;9.5,11.25;chest2.png]"..
+		"listcolors[#ffffff00;#ffffff80]"..
 		"style_type[list;spacing=0,0]"..
-		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0.25,0.25;9,3;]"..
-		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0.25,3.25;9,3;]"..
-		"list[current_player;main;0.25,3.75;9,3;9]"..
-		"list[current_player;main;0.25,4.25;9,1;]"..
+		"list[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main;0.25,0.25;9,3;]"..
+		"list[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main;0.25,3.25;9,3;]"..
+		"list[current_player;main;0.25,6.75;9,3;9]"..
+		"list[current_player;main;0.25,10;9,1;]"..
 		-- BEGIN OF LISTRING WORKAROUND
 		"listring[current_player;main]"..
 		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";input]"..
 		-- END OF LISTRING WORKAROUND
 		"listring[current_player;main]"..
-		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main]"..
+		"listring[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main]"..
 		"listring[current_player;main]"..
-		"listring[nodemeta:"..pos_other.x..","..pos_other.y..","..pos_other.z..";main]")
+		"listring[nodemeta:"..pos.x..","..pos.y..","..pos.z..";main]")
 
 		player_chest_open(clicker, pos, left_name, node.param2, true)
 	end,
@@ -449,7 +453,6 @@ minetest.register_node(right_name, {
 
 		minetest.show_formspec(clicker:get_player_name(),
 		"mcl_chests:chest_"..pos.x.."_"..pos.y.."_"..pos.z,
-
 		"size[9.5,11.25]"..
 		"real_coordinates[true]"..
 		"bgcolor[black;neither]"..
