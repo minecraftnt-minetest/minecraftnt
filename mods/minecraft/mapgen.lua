@@ -34,6 +34,19 @@ minetest.register_biome({
 	humidity_point = 35,
 })
 
+minetest.register_biome({
+	name = "sea",
+	node_filler = "minecraft:sand",
+	depth_filler = 2,
+	node_riverbed = "minecraft:sand",
+	depth_riverbed = 2,
+	y_max = 4,
+	y_min = -3,
+	heat_point = 50,
+	humidity_point = 35,
+})
+
+
 minetest.register_decoration({
 	deco_type = "simple",
 	place_on = {"minecraft:grass"},
