@@ -32,3 +32,8 @@ minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_image("gui_hotbar.png")
 	player:hud_set_hotbar_selected_image("gui_hotbar_selected.png")
 end)
+
+-- Disable sneak (There's also a configuration in minetest.conf to make sneaking speed identical to normal walking)
+minetest.register_on_joinplayer(function(player)
+	player:set_physics_override({ sneak = false })
+end)
