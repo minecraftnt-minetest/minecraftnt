@@ -37,3 +37,10 @@ end)
 minetest.register_on_joinplayer(function(player)
 	player:set_physics_override({ sneak = false })
 end)
+
+-- Make items drop one-by-one instead of whole stack
+local old_drop = minetest.item_drop
+minetest.item_drop = function(itemstack, dropper, pos)
+    old_drop(itemstack:take_item(1), dropper, pos)
+    return itemstack
+end
