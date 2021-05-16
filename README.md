@@ -4,6 +4,8 @@
 
 <p align="center"><img src="https://i.imgur.com/xnGs513.png"></p>
 
+![Discord](https://img.shields.io/discord/843433229486522389?style=flat-square)
+
 An attempt to recreate Minecraft inf-20100630-2, retroactively referred to as Alpha 1.0.0, in Minetest. (And a1.1.2 later down the line)
 
 ## [Download Latest Commit](https://github.com/danil275487/minecraftnt/archive/refs/heads/main.zip)
