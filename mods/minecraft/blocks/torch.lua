@@ -26,6 +26,7 @@ local floordef = {
 	drawtype = "mesh",
 	mesh = "torch_floor.obj",
 	inventory_image = "terrain.png^[sheet:16x16:0,5",
+	wield_image = "terrain.png^[sheet:16x16:0,5",
 	tiles = {"terrain.png^[sheet:16x16:0,5"},
 	use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or false,
 	paramtype = "light",
