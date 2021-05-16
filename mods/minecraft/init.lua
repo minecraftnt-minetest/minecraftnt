@@ -44,4 +44,3 @@ minetest.item_drop = function(itemstack, dropper, pos)
     old_drop(itemstack:take_item(1), dropper, pos)
     return itemstack
 end
-
