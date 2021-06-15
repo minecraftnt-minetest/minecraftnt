@@ -34,6 +34,7 @@ minetest.register_node("minecraft:leaves", {
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy=1,dig_immediate=3},
+	waving = 2,
 	drop = {
 		max_items = 1,
 		items = {
@@ -332,7 +333,8 @@ minetest.register_node("minecraft:flower", {
 	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:13,0"},
 	groups = {dig_immediate=2,snappy=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:13,0"
+	inventory_image = "terrain.png^[sheet:16x16:13,0",
+	waving = 1
 })
 
 minetest.register_node("minecraft:rose", {
@@ -343,7 +345,8 @@ minetest.register_node("minecraft:rose", {
 	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:12,0"},
 	groups = {dig_immediate=2,snappy=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:12,0"
+	inventory_image = "terrain.png^[sheet:16x16:12,0",
+	waving = 1
 })
 
 minetest.register_node("minecraft:mushroom", {
@@ -354,7 +357,8 @@ minetest.register_node("minecraft:mushroom", {
 	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:12,1"},
 	groups = {dig_immediate=2,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:12,1"
+	inventory_image = "terrain.png^[sheet:16x16:12,1",
+	waving = 1
 })
 
 minetest.register_node("minecraft:mushroom2", {
@@ -365,7 +369,8 @@ minetest.register_node("minecraft:mushroom2", {
 	sunlight_propagates = true,
 	tiles = {"terrain.png^[sheet:16x16:13,1"},
 	groups = {dig_immediate=2,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:13,1"
+	inventory_image = "terrain.png^[sheet:16x16:13,1",
+	waving = 1
 })
 
 minetest.register_node("minecraft:wool", {
