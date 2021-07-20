@@ -8,7 +8,7 @@ def download(url, name):
 
 def check_sound_and_download(url, name):
 	if not Path(name).exists():
-		print("File \"%s\"doesn't exist, let's download it." % name)
+		print("File \"%s\" doesn't exist, let's download it." % name)
 		download(url, name)
 	else:
 		print("File \"%s\" already exists." % name)
@@ -23,6 +23,12 @@ def main():
 	# piano1 through piano3
 	for i in range(1,4):
 		check_sound_and_download("https://betacraft.pl/MinecraftResources/newmusic/piano%s.ogg" % i, Path("mods/minecraft_music/sounds/piano%s.ogg" % i))
+
+	# step sounds
+	step_sounds = [ 'cloth', 'grass', 'gravel', 'sand', 'snow', 'stone', 'wood' ]
+	for step_sound in step_sounds:
+		for i in range(1,5):
+			check_sound_and_download("https://betacraft.pl/MinecraftResources/newsound/step/%s%s.ogg" % (step_sound, i), Path("mods/minecraft/sounds/%s.%s.ogg" % (step_sound, i)))
 
 if __name__ == "__main__":
 	main()

@@ -298,6 +298,8 @@ function doors.register(name, def)
 	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-5/16}}
 	def.use_texture_alpha = "clip"
 
+	def.sounds = block_sound('wood')
+
 	def.mesh = "door_a.obj"
 	minetest.register_node(":" .. name .. "_a", def)
 

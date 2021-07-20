@@ -38,6 +38,7 @@ local floordef = {
 	light_source = minetest.LIGHT_MAX,
 	groups = groups,
 	drop = itemstring,
+	sounds = block_sound('wood'),
 	selection_box = {
 		type = "wallmounted",
 		wall_top = {-1/16, -1/16, -1/16, 1/16, 0.5, 1/16},

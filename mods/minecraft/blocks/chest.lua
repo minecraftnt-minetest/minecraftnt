@@ -155,6 +155,8 @@ minetest.register_node(small_name, {
 	drop = small_name,
 	groups = {handy=1,axey=1, container=2, deco_block=1, material_wood=1,flammable=-1,not_in_creative_inventory=1,choppy=2},
 
+	sounds = block_sound('wood'),
+
 	is_ground_content = false,
 	on_construct = function(pos)
 		local param2 = minetest.get_node(pos).param2
@@ -258,6 +260,7 @@ minetest.register_node(left_name, {
 	groups = {handy=1,axey=1, container=5,not_in_creative_inventory=1, material_wood=1,flammable=-1,double_chest=1,choppy=2},
 	drop = small_name,
 	is_ground_content = false,
+	sounds = block_sound('wood'),
 	on_construct = function(pos)
 		local n = minetest.get_node(pos)
 		local param2 = n.param2
