@@ -5,7 +5,8 @@ minetest.register_node("minecraft:sponge", {
 	groups = {crumbly=3},
 	on_construct = function(pos)
 		sponge_behavior(pos)
-	end
+	end,
+	sounds = block_sound('grass')
 })
 
 minetest.register_abm({

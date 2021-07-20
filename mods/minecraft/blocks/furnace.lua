@@ -335,6 +335,7 @@ minetest.register_node("minecraft:furnace", {
 	allow_metadata_inventory_put = allow_metadata_inventory_put,
 	allow_metadata_inventory_move = allow_metadata_inventory_move,
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
+	sounds = block_sound('stone')
 })
 
 minetest.register_node("minecraft:lit_furnace", {
@@ -355,4 +356,5 @@ minetest.register_node("minecraft:lit_furnace", {
 	allow_metadata_inventory_put = allow_metadata_inventory_put,
 	allow_metadata_inventory_move = allow_metadata_inventory_move,
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
+	sounds = block_sound('stone')
 })

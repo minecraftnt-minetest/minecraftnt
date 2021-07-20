@@ -13,6 +13,7 @@ minetest.register_node("minecraft:ladder", {
 	sunlight_propagates = true,
 	walkable = true,
 	climbable = true,
+	sounds = block_sound('wood'),
 	node_box = {
 		type = "wallmounted",
 		wall_side = { -0.5, -0.5, -0.5, -7/16, 0.5, 0.5 },
