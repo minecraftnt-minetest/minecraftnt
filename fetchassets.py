@@ -30,6 +30,9 @@ def main():
 		for i in range(1,5):
 			check_sound_and_download("https://betacraft.pl/MinecraftResources/newsound/step/%s%s.ogg" % (step_sound, i), Path("mods/minecraft/sounds/%s.%s.ogg" % (step_sound, i)))
 
+	# item pickup sound
+	check_sound_and_download("https://betacraft.pl/MinecraftResources/newsound/random/pop.ogg", Path("mods/mcnt_itemdrop/sounds/pop.ogg"))
+
 if __name__ == "__main__":
 	main()
 
