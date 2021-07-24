@@ -2,6 +2,52 @@
 --- Ores mapgen!
 
 --
+-- Misc stuff
+--
+
+-- Dirt
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "minecraft:dirt",
+	wherein        = "minecraft:stone",
+	clust_scarcity = 15*15*15,
+	clust_num_ores = 33,
+	clust_size     = 4,
+	y_min          = -62,
+	y_max          = 65536,
+	noise_params = {
+		offset  = 0,
+		scale   = 1,
+		spread  = {x=250, y=250, z=250},
+		seed    = 12345,
+		octaves = 3,
+		persist = 0.6,
+		lacunarity = 2,
+	}
+})
+
+-- Gravel
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "minecraft:gravel",
+	wherein        = "minecraft:stone",
+	clust_scarcity = 14*14*14,
+	clust_num_ores = 33,
+	clust_size     = 5,
+	y_min          = -62,
+	y_max          = 65536,
+	noise_params = {
+		offset  = 0,
+		scale   = 1,
+		spread  = {x=250, y=250, z=250},
+		seed    = 12345,
+		octaves = 3,
+		persist = 0.6,
+		lacunarity = 2,
+	}
+})
+
+--
 -- Coal
 --
 

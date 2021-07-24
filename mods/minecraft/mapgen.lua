@@ -36,6 +36,8 @@ minetest.register_biome({
 
 minetest.register_biome({
 	name = "sea",
+	node_top = "minecraft:sand",
+	depth_top = 1,
 	node_filler = "minecraft:sand",
 	depth_filler = 2,
 	y_max = -3,
