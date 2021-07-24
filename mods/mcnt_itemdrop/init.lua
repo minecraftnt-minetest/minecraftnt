@@ -7,7 +7,7 @@ local function can_pickup(entity, player)
 	return true
 end
 
-local pickup_radius = 0.75
+local pickup_radius = 1
 
 minetest.registered_entities["__builtin:item"].pointable = false
 
