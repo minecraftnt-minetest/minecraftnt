@@ -11,6 +11,10 @@ function block_sound(material)
 			name = material,
 			gain = 1.0
 		},
+		dig = {
+			name = material,
+			gain = 1.0
+		},
 		dug = {
 			name = material,
 			gain = 1.0
