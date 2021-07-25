@@ -143,12 +143,13 @@ end
 minetest.register_node(small_name, {
 	description = "Chest",
 	tiles = {
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:11,1"},
+		terrain(25),
+		terrain(25),
+		terrain(26),
+		terrain(26),
+		terrain(26),
+		terrain(27),
+	},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	stack_max = 64,
@@ -249,12 +250,13 @@ minetest.register_node(small_name, {
 
 minetest.register_node(left_name, {
 	tiles = {
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:10,3",
-		"terrain.png^[sheet:16x16:9,2"},
+		terrain(25),
+		terrain(25),
+		terrain(26),
+		terrain(26),
+		terrain(58),
+		terrain(41),
+	},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {handy=1,axey=1, container=5,not_in_creative_inventory=1, material_wood=1,flammable=-1,double_chest=1,choppy=2},
@@ -365,12 +367,13 @@ minetest.register_node(left_name, {
 
 minetest.register_node(right_name, {
 	tiles = {
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:9,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:10,1",
-		"terrain.png^[sheet:16x16:9,3",
-		"terrain.png^[sheet:16x16:10,2"},
+		terrain(25),
+		terrain(25),
+		terrain(26),
+		terrain(26),
+		terrain(57),
+		terrain(42)
+	},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {handy=1,axey=1, container=6,not_in_creative_inventory=1, material_wood=1,flammable=-1,double_chest=2,choppy=2},

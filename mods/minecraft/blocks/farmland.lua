@@ -1,7 +1,10 @@
 
 minetest.register_node("minecraft:farmland", {
 	description = "Farmland",
-	tiles = {"terrain.png^[sheet:16x16:7,5", "terrain.png^[sheet:16x16:2,0"},
+	tiles = {
+		terrain(87),
+		terrain(2)
+	},
 	drop = "minecraft:dirt",
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -16,13 +19,16 @@ minetest.register_node("minecraft:farmland", {
 		local meta = minetest.get_meta(pos)
 		meta:set_int("wet", 0)
 	end,
-	groups = {crumbly=3},
-	--sounds = mcl_sounds.node_sound_dirt_defaults(),
+	groups = { crumbly = 3 },
+	sounds = block_sound('gravel'),
 })
 
 minetest.register_node("minecraft:farmland_wet", {
 	description = "Hydrated Farmland",
-	tiles = {"terrain.png^[sheet:16x16:6,5", "terrain.png^[sheet:16x16:2,0"},
+	tiles = {
+		terrain(86),
+		terrain(2)
+	},
 	drop = "minecraft:dirt",
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -36,8 +42,8 @@ minetest.register_node("minecraft:farmland_wet", {
 		local meta = minetest.get_meta(pos)
 		meta:set_int("wet", 7)
 	end,
-	groups = {crumbly=3},
-	--sounds = mcl_sounds.node_sound_dirt_defaults(),
+	groups = { crumbly = 3 },
+	sounds = block_sound('gravel'),
 })
 
 minetest.register_abm({

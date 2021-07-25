@@ -1,7 +1,7 @@
 minetest.register_node("minecraft:stone", {
 	description = "Stone",
-	tiles = {"terrain.png^[sheet:16x16:1,0"},
-	groups = {cracky=3},
+	tiles = { terrain(1) },
+	groups = { cracky = 3 },
 	drop = "minecraft:cobble",
 	sounds = block_sound('stone'),
 })
@@ -9,39 +9,41 @@ minetest.register_node("minecraft:stone", {
 minetest.register_node("minecraft:grass", {
 	description = "Grass",
 	drop = "minecraft:dirt",
-	tiles ={"terrain.png^[sheet:16x16:0,0", "terrain.png^[sheet:16x16:2,0",
-		{name = "terrain.png^[sheet:16x16:3,0",
-		tileable_vertical = false}},
-	groups = {crumbly=3, soil=1, cultivatable=1},
+	tiles = {
+		terrain(0),
+		terrain(2),
+		{name = terrain(3), tileable_vertical = false}
+	},
+	groups = { crumbly = 3, soil = 1, cultivatable = 1 },
 	sounds = block_sound('grass'),
 })
 
 minetest.register_node("minecraft:dirt", {
 	description = "Dirt",
-	tiles ={"terrain.png^[sheet:16x16:2,0"},
-	groups = {crumbly=3, soil=1, cultivatable=1},
+	tiles = { terrain(2) },
+	groups = { crumbly = 3, soil = 1, cultivatable = 1 },
 	sounds = block_sound('gravel'),
 })
 
 minetest.register_node("minecraft:oak", {
 	description = "Wood",
 	tiles = {
-		"terrain.png^[sheet:16x16:5,1",
-		"terrain.png^[sheet:16x16:5,1",
-		"terrain.png^[sheet:16x16:4,1"
+		terrain(21),
+		terrain(21),
+		terrain(20)
 	},
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
+	groups = {choppy = 2, oddly_breakable_by_hand = 2 },
 	sounds = block_sound('wood'),
 })
 
 minetest.register_node("minecraft:leaves", {
 	description = "Leaves",
 	drawtype = "allfaces_optional",
-	tiles = {"terrain.png^[sheet:16x16:4,3"},
+	tiles = { terrain(52) },
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy=1,dig_immediate=3},
+	groups = { snappy = 1, dig_immediate = 3 },
 	waving = 2,
 	drop = {
 		max_items = 1,
@@ -57,9 +59,9 @@ minetest.register_node("minecraft:leaves", {
 
 minetest.register_node("minecraft:plank", {
 	description = "Wooden Planks",
-	tiles = {"terrain.png^[sheet:16x16:4,0"},
+	tiles = { terrain(4) },
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
+	groups = { choppy = 2, oddly_breakable_by_hand = 2 },
 	sounds = block_sound('wood'),
 })
 
@@ -67,103 +69,106 @@ minetest.register_node("minecraft:glass", {
 	description = "Glass",
 	drawtype = "glasslike",
 	drop = "",
-	tiles = {"terrain.png^[sheet:16x16:1,3"},
+	tiles = { terrain(19) },
 	paramtype = "light",
 	is_ground_content = false,
 	sunlight_propagates = true,
-	groups = {cracky=3,oddly_breakable_by_hand=3},
+	groups = { cracky = 3, oddly_breakable_by_hand = 3 },
 	sounds = block_sound('glass'),
 })
 
 minetest.register_node("minecraft:sand", {
 	description = "Sand",
-	tiles ={"terrain.png^[sheet:16x16:2,1"},
-	groups = {falling_node=1,crumbly=3},
+	tiles = { terrain(18) },
+	groups = { falling_node = 1, crumbly = 3 },
 	sounds = block_sound('sand'),
 })
 
 minetest.register_node("minecraft:gravel", {
 	description = "Gravel",
-	tiles ={"terrain.png^[sheet:16x16:3,1"},
+	tiles = { terrain(19) },
 	groups = {falling_node=1,crumbly=3},
 	sounds = block_sound('gravel'),
 })
 
 minetest.register_node("minecraft:cobble", {
 	description = "Cobblestone",
-	tiles ={"terrain.png^[sheet:16x16:0,1"},
+	tiles = { terrain(16) },
 	is_ground_content = false,
-	groups = {cracky=3},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:mossycobble", {
 	description = "Moss Stone",
-	tiles ={"terrain.png^[sheet:16x16:4,2"},
+	tiles = { terrain(36) },
 	is_ground_content = false,
-	groups = {cracky=3},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:bedrock", {
 	description = "Bedrock",
-	tiles ={"terrain.png^[sheet:16x16:1,1"},
+	tiles = { terrain(17) },
 	is_ground_content = false,
-	groups = {unbreakable=1},
+	groups = { unbreakable = 1 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:bricks", {
 	description = "Bricks",
-	tiles ={"terrain.png^[sheet:16x16:7,0"},
+	tiles = { terrain(7) },
 	is_ground_content = false,
-	groups = {cracky=3},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:bookshelf", {
 	description = "Bookshelf",
-	tiles = {"terrain.png^[sheet:16x16:4,0", "terrain.png^[sheet:16x16:4,0", "terrain.png^[sheet:16x16:3,2"},
+	tiles = {
+		terrain(4),
+		terrain(4),
+		terrain(35),
+	},
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
+	groups = { choppy = 2, oddly_breakable_by_hand = 2 },
 	sounds = block_sound('wood'),
 })
 
 minetest.register_node("minecraft:coal_ore", {
 	description = "Coal Ore",
-	tiles = {"terrain.png^[sheet:16x16:2,2"},
-	groups = {cracky = 3},
 	drop = "minecraft:coal",
+	tiles = { terrain(34) },
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:iron_ore", {
 	description = "Iron Ore",
-	tiles = {"terrain.png^[sheet:16x16:1,2"},
-	groups = {cracky=2,level=1},
+	tiles = { terrain(33) },
+	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:gold_ore", {
 	description = "Gold Ore",
-	tiles = {"terrain.png^[sheet:16x16:0,2"},
-	groups = {cracky=2,level=1},
+	tiles = { terrain(32) },
+	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:diamond_ore", {
 	description = "Diamond Ore",
-	tiles = {"terrain.png^[sheet:16x16:2,3"},
-	groups = {cracky=1,level=2},
 	drop = "minecraft:diamond",
+	tiles = { terrain(50) },
+	groups = { cracky = 1, level = 2 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:plank_stairs", {
 	description = "Wooden Stairs",
-	tiles = {"terrain.png^[sheet:16x16:4,0"},
+	tiles = { terrain(4) },
 	is_ground_content = false,
-	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -174,14 +179,14 @@ minetest.register_node("minecraft:plank_stairs", {
 			{-0.5, -0.5, 0, 0.5, 0.5, 0.5}, -- NodeBox2
 		}
 	},
+	groups = { cracky = 3 },
 	sounds = block_sound('wood'),
 })
 
 minetest.register_node("minecraft:cobble_stairs", {
 	description = "Stone Stairs",
-	tiles ={"terrain.png^[sheet:16x16:0,1"},
+	tiles = { terrain(16) },
 	is_ground_content = false,
-	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2  = "facedir",
@@ -192,14 +197,14 @@ minetest.register_node("minecraft:cobble_stairs", {
 			{-0.5, -0.5, 0, 0.5, 0.5, 0.5}, -- NodeBox2
 		}
 	},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:plank_slab", {
 	description = "Wooden Slab",
-	tiles = {"terrain.png^[sheet:16x16:4,0"},
+	tiles = { terrain(4) },
 	is_ground_content = false,
-	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	node_box = {
@@ -208,14 +213,14 @@ minetest.register_node("minecraft:plank_slab", {
 			{-0.5, -0.5, -0.5, 0.5, 0, 0.5}, -- NodeBox1
 		}
 	},
+	groups = {cracky=3},
 	sounds = block_sound('wood'),
 })
 
 minetest.register_node("minecraft:cobble_slab", {
 	description = "Stone Slab",
-	tiles ={"terrain.png^[sheet:16x16:0,1"},
+	tiles = { terrain(16) },
 	is_ground_content = false,
-	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	node_box = {
@@ -224,21 +229,21 @@ minetest.register_node("minecraft:cobble_slab", {
 			{-0.5, -0.5, -0.5, 0.5, 0, 0.5}, -- NodeBox1
 		}
 	},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:stone_slab", {
 	description = "Stone Slab",
 	tiles = {
-		"terrain.png^[sheet:16x16:6,0",    -- y+
-		"terrain.png^[sheet:16x16:6,0",  -- y-
-		"terrain.png^[sheet:16x16:5,0", -- x+
-		"terrain.png^[sheet:16x16:5,0",  -- x-
-		"terrain.png^[sheet:16x16:5,0",  -- z+
-		"terrain.png^[sheet:16x16:5,0", -- z-
+		terrain(6),
+		terrain(6),
+		terrain(5),
+		terrain(5),
+		terrain(5),
+		terrain(5),
 	},
 	is_ground_content = false,
-	groups = {cracky=3},
 	drawtype = "nodebox",
 	paramtype = "light",
 	node_box = {
@@ -247,64 +252,63 @@ minetest.register_node("minecraft:stone_slab", {
 			{-0.5, -0.5, -0.5, 0.5, 0, 0.5}, -- NodeBox1
 		}
 	},
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:stone_slab_block", {
 	description = "tile.stoneSlab",
+	drop = "minecraft:stone_slab",
 	tiles = {
-		"terrain.png^[sheet:16x16:6,0",    -- y+
-		"terrain.png^[sheet:16x16:6,0",  -- y-
-		"terrain.png^[sheet:16x16:5,0", -- x+
-		"terrain.png^[sheet:16x16:5,0",  -- x-
-		"terrain.png^[sheet:16x16:5,0",  -- z+
-		"terrain.png^[sheet:16x16:5,0", -- z-
+		terrain(6),
+		terrain(6),
+		terrain(5),
+		terrain(5),
+		terrain(5),
+		terrain(5),
 	},
 	is_ground_content = false,
-	groups = {cracky=3},
-	drop = "minecraft:stone_slab",
+	groups = { cracky = 3 },
 	sounds = block_sound('stone'),
 })
-
-
 
 minetest.register_node("minecraft:iron_block", {
 	description = "Block of Iron",
 	tiles = {
-		"terrain.png^[sheet:16x16:6,1",    -- y+
-		"terrain.png^[sheet:16x16:6,3",  -- y-
-		"terrain.png^[sheet:16x16:6,2", -- x+
-		"terrain.png^[sheet:16x16:6,2",  -- x-
-		"terrain.png^[sheet:16x16:6,2",  -- z+
-		"terrain.png^[sheet:16x16:6,2", -- z-
+		terrain(22),
+		terrain(54),
+		terrain(38),
+		terrain(38),
+		terrain(38),
+		terrain(38),
 	},
-	groups = {cracky=2,level=1},
+	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('metal'),
 })
 
 minetest.register_node("minecraft:gold_block", {
 	description = "Block of Gold",
 	tiles = {
-		"terrain.png^[sheet:16x16:7,1",    -- y+
-		"terrain.png^[sheet:16x16:7,3",  -- y-
-		"terrain.png^[sheet:16x16:7,2", -- x+
-		"terrain.png^[sheet:16x16:7,2",  -- x-
-		"terrain.png^[sheet:16x16:7,2",  -- z+
-		"terrain.png^[sheet:16x16:7,2", -- z-
+		terrain(23),
+		terrain(55),
+		terrain(39),
+		terrain(39),
+		terrain(39),
+		terrain(39),
 	},
-	groups = {cracky=2,level=1},
+	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('metal'),
 })
 
 minetest.register_node("minecraft:diamond_block", {
 	description = "Block of Diamond",
 	tiles = {
-		"terrain.png^[sheet:16x16:8,1",    -- y+
-		"terrain.png^[sheet:16x16:8,3",  -- y-
-		"terrain.png^[sheet:16x16:8,2", -- x+
-		"terrain.png^[sheet:16x16:8,2",  -- x-
-		"terrain.png^[sheet:16x16:8,2",  -- z+
-		"terrain.png^[sheet:16x16:8,2", -- z-
+		terrain(24),
+		terrain(56),
+		terrain(40),
+		terrain(40),
+		terrain(40),
+		terrain(40),
 	},
 	groups = {cracky=1,level=2},
 	sounds = block_sound('metal'),
@@ -312,14 +316,15 @@ minetest.register_node("minecraft:diamond_block", {
 
 minetest.register_node("minecraft:crafting_table", {
 	description = "Crafting Table",
-	tiles = {"terrain.png^[sheet:16x16:11,2",
-			 "terrain.png^[sheet:16x16:4,0",
-			 "terrain.png^[sheet:16x16:11,3",
-			 "terrain.png^[sheet:16x16:11,3",
-			 "terrain.png^[sheet:16x16:12,3",
-			 "terrain.png^[sheet:16x16:12,3",},
+	tiles = {
+		terrain(43),
+		terrain(4),
+		terrain(59),
+		terrain(59),
+		terrain(60),
+		terrain(60),
+	},
 	is_ground_content = false,
-	groups = {choppy=2,oddly_breakable_by_hand=2},
 	on_rightclick = function(pos, node, player, itemstack)
 		player:get_inventory():set_width("craft", 3)
 		player:get_inventory():set_size("craft", 9)
@@ -339,23 +344,26 @@ minetest.register_node("minecraft:crafting_table", {
 
 		minetest.show_formspec(player:get_player_name(), "main", form)
 	end,
+	groups = { choppy = 2, oddly_breakable_by_hand = 2 },
 	sounds = block_sound('wood'),
 })
 
 minetest.register_node("minecraft:obsidian", {
 	description = "Obsidian",
-	tiles = {"terrain.png^[sheet:16x16:5,2"},
-	groups = {cracky=1, level=3},
+	tiles = { terrain(37) },
+	groups = { cracky = 1, level = 3 },
 	sounds = block_sound('stone'),
 })
 
 minetest.register_node("minecraft:tnt", {
 	description = "TNT",
-	tiles = {"terrain.png^[sheet:16x16:9,0",
-			 "terrain.png^[sheet:16x16:10,0",
-			 "terrain.png^[sheet:16x16:8,0"},
+	tiles = {
+		terrain(9),
+		terrain(10),
+		terrain(8)
+	},
 	is_ground_content = false,
-	groups = {dig_immediate=2},
+	groups = { dig_immediate = 2 },
 	sounds = block_sound('grass'),
 })
 
@@ -365,9 +373,9 @@ minetest.register_node("minecraft:flower", {
 	paramtype = "light",
 	walkable = false,
 	sunlight_propagates = true,
-	tiles = {"terrain.png^[sheet:16x16:13,0"},
-	groups = {dig_immediate=3,snappy=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:13,0",
+	tiles = { terrain(13) },
+	groups = { dig_immediate = 3, snappy = 3, attached_node = 1 },
+	inventory_image = terrain(13),
 	waving = 1,
 	sounds = block_sound('grass'),
 })
@@ -378,9 +386,9 @@ minetest.register_node("minecraft:rose", {
 	paramtype = "light",
 	walkable = false,
 	sunlight_propagates = true,
-	tiles = {"terrain.png^[sheet:16x16:12,0"},
-	groups = {dig_immediate=3,snappy=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:12,0",
+	tiles = { terrain(12) },
+	groups = { dig_immediate = 3, snappy = 3, attached_node = 1 },
+	inventory_image = terrain(12),
 	waving = 1,
 	sounds = block_sound('grass'),
 })
@@ -391,9 +399,9 @@ minetest.register_node("minecraft:mushroom", {
 	paramtype = "light",
 	walkable = false,
 	sunlight_propagates = true,
-	tiles = {"terrain.png^[sheet:16x16:12,1"},
-	groups = {dig_immediate=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:12,1",
+	tiles = { terrain(28) },
+	groups = { dig_immediate = 3, attached_node = 1 },
+	inventory_image = terrain(28),
 	waving = 1,
 	sounds = block_sound('grass'),
 })
@@ -404,27 +412,27 @@ minetest.register_node("minecraft:mushroom2", {
 	paramtype = "light",
 	walkable = false,
 	sunlight_propagates = true,
-	tiles = {"terrain.png^[sheet:16x16:13,1"},
-	groups = {dig_immediate=3,attached_node = 1},
-	inventory_image = "terrain.png^[sheet:16x16:13,1",
+	tiles = { terrain(29) },
+	groups = { dig_immediate = 3, attached_node = 1 },
+	inventory_image = terrain(29),
 	waving = 1,
 	sounds = block_sound('grass'),
 })
 
 minetest.register_node("minecraft:wool", {
 	description = "Wool",
-	tiles = {"terrain.png^[sheet:16x16:0,4"},
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3},
+	tiles = { terrain(64) },
+	groups = { snappy = 1, choppy = 2, oddly_breakable_by_hand = 3 },
 	sounds = block_sound('cloth'),
 })
 
 minetest.register_node("minecraft:spawner", {
 	description = "Mob Spawner",
 	drawtype = "allfaces",
-	tiles = {"terrain.png^[sheet:16x16:1,4"},
+	tiles = { terrain(65) },
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {choppy=1},
+	groups = { choppy = 1 },
 	drop = "",
 	sounds = block_sound('metal'),
 })
