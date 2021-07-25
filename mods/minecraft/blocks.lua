@@ -332,14 +332,15 @@ minetest.register_node("minecraft:crafting_table", {
 		local form = [[
 			size[9.5,9]
 			real_coordinates[true]
-			bgcolor[black;neither]
+			bgcolor[blue;true]
 			listcolors[#ffffff00;#ffffff80]
-			style_type[list;spacing=0,0]
+			style_type[list;spacing=0.125,0.125;size=0.85,0.85]
 			image[0,0;9.5,9;crafting.png]
-			list[current_player;main;0.25,7.75;9,1;0]
-			list[current_player;main;0.25,4.5;9,3;9]
-			list[current_player;craft;1.5,0.75;3,3;0]
-			list[current_player;craftpreview;6.75,1.75;1,1;0]
+			model[1.25,0.25;3,4;playermodel;character.b3d;character.png;0,180;false;false;walk,stand]
+			list[current_player;craft;1.65,0.95;3,3;0]
+			list[current_player;craftpreview;6.70,1.92;1,1;0]
+			list[current_player;main;0.45,7.70;9,1;0]
+			list[current_player;main;0.45,4.57;9,3;9]
 		]]
 
 		minetest.show_formspec(player:get_player_name(), "main", form)

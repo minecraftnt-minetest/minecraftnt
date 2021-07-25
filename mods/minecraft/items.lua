@@ -72,18 +72,21 @@ minetest.register_craftitem("minecraft:seeds", {
 
 minetest.register_craftitem("minecraft:apple", {
 	description = "Apple",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:10,0",
 	on_use = minetest.item_eat(4),
 })
 
 minetest.register_craftitem("minecraft:golden_apple", {
 	description = "Golden Apple",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:11,0",
 	on_use = minetest.item_eat(20),
 })
 
 minetest.register_craftitem("minecraft:bow", {
 	description = "Bow",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:5,1"
 })
 
@@ -124,12 +127,14 @@ minetest.register_craftitem("minecraft:gunpowder", {
 
 minetest.register_craftitem("minecraft:bread", {
 	description = "Bread",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:9,2",
 	on_use = minetest.item_eat(5),
 })
 
 minetest.register_craftitem("minecraft:sign", {
 	description = "Sign",
+	stack_max = 16,
 	inventory_image = "items.png^[sheet:16x16:10,2"
 })
 
@@ -150,24 +155,28 @@ minetest.register_craftitem("minecraft:bowl", {
 
 minetest.register_craftitem("minecraft:mushroom_stew", {
 	description = "Mushroom Stew",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,4",
 	on_use = minetest.item_eat(10, "minecraft:bowl"),
 })
 
 minetest.register_craftitem("minecraft:raw_porkchop", {
 	description = "Raw Porkchop",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:7,5",
 	on_use = minetest.item_eat(3),
 })
 
 minetest.register_craftitem("minecraft:cooked_porkchop", {
 	description = "Cooked Porkchop",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,5",
 	on_use = minetest.item_eat(8),
 })
 
 minetest.register_craftitem("minecraft:saddle", {
 	description = "Saddle",
+	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,6"
 })
 
