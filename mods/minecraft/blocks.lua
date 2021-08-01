@@ -67,7 +67,7 @@ minetest.register_node("minecraft:plank", {
 
 minetest.register_node("minecraft:glass", {
 	description = "Glass",
-	drawtype = "glasslike_framed",
+	drawtype = "glasslike_framed_optional",
 	drop = "",
 	tiles = { terrain(49), "glass.png" },
 	paramtype = "light",
