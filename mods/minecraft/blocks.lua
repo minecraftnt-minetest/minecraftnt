@@ -69,7 +69,7 @@ minetest.register_node("minecraft:glass", {
 	description = "Glass",
 	drawtype = "glasslike",
 	drop = "",
-	tiles = { terrain(19) },
+	tiles = { terrain(49) },
 	paramtype = "light",
 	is_ground_content = false,
 	sunlight_propagates = true,
