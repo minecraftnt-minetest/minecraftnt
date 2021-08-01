@@ -39,14 +39,14 @@ end
 minetest.register_node("minecraft:sapling", {
 	description = "Sapling",
 	drawtype = "plantlike",
-	tiles = {"terrain.png^[sheet:16x16:15,0"},
-	inventory_image = "terrain.png^[sheet:16x16:15,0",
-	wield_image = "terrain.png^[sheet:16x16:15,0",
+	tiles = { terrain(15) },
+	inventory_image = terrain(15),
+	wield_image = terrain(15),
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
 	on_timer = grow_sapling,
-	groups = {snappy = 2,dig_immediate = 3,attached_node = 1,sapling = 1},
+	groups = { snappy = 2, dig_immediate = 3, attached_node = 1, sapling = 1 },
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(1200, 3600))
 	end,

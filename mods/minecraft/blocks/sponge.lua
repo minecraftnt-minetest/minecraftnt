@@ -1,8 +1,8 @@
 
 minetest.register_node("minecraft:sponge", {
 	description = "Sponge",
-	tiles = {"terrain.png^[sheet:16x16:0,3"},
-	groups = {crumbly=3},
+	tiles = { terrain(48) },
+	groups = { crumbly = 3 },
 	on_construct = function(pos)
 		sponge_behavior(pos)
 	end,
