@@ -28,7 +28,7 @@ for i = 1, 7 do
 			},
 		},
 		groups = {dig_immediate=3, not_in_creative_inventory=1, plant=1,attached_node=1, dig_by_water=1,destroy_by_lava_flow=1, dig_by_piston=1},
-	--	sounds = mcl_sounds.node_sound_leaves_defaults(),
+		sounds = block_sound('grass'),
 	})
 end
 
@@ -53,7 +53,7 @@ minetest.register_node("minecraft:wheatblock", {
 		}
 	},
 	groups = {dig_immediate=3, not_in_creative_inventory=1, plant=1,attached_node=1, dig_by_water=1,destroy_by_lava_flow=1, dig_by_piston=1},
-	--sounds = mcl_sounds.node_sound_leaves_defaults(),
+	sounds = block_sound('grass'),
 })
 
 farming:add_plant("plant_wheat", "minecraft:wheatblock", {"minecraft:wheatblock_1", "minecraft:wheatblock_2", "minecraft:wheatblock_3", "minecraft:wheatblock_4", "minecraft:wheatblock_5", "minecraft:wheatblock_6", "minecraft:wheatblock_7"}, 25, 20)
