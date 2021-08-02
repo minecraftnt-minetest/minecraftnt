@@ -16,7 +16,7 @@ local location = {
 
 local function add_wield_entity(player)
 	local name = player:get_player_name()
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	if name and pos then
 		pos.y = pos.y + 0.5
 		local object = minetest.add_entity(pos, "wield3d:wield_entity")
