@@ -1,4 +1,4 @@
---TODO: armor, fence, furnace, ladder, minecart stuff (oh yeah hoes and swords too ofc)
+--TODO: armor, minecart stuff (oh yeah swords too ofc)
 
 --
 -- General recipes.
