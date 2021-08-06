@@ -83,7 +83,7 @@ minetest.register_tool("minecraft:gold_hoe", {
 	on_place = hoe_on_place_function(33),
 })
 
-minetest.register_tool("minecraft:gold_hoe", {
+minetest.register_tool("minecraft:diamond_hoe", {
 	description = "Diamond Hoe",
 	inventory_image = "items.png^[sheet:16x16:3,8",
 	tool_capabilities = {
