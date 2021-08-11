@@ -178,6 +178,7 @@ function doors.register(name, def)
 		description = def.description,
 		inventory_image = def.inventory_image,
 		groups = table.copy(def.groups),
+		stack_max = 1,
 
 		on_place = function(itemstack, placer, pointed_thing)
 			local pos
@@ -319,7 +320,7 @@ function doors.register(name, def)
 end
 
 doors.register("door", {
-		tiles = {{ name = "door.png", backface_culling = true }},
+		tiles = {{ name = "terrain.png", backface_culling = true }},
 		description = "Wooden Door",
 		inventory_image = "items.png^[sheet:16x16:11,2",
 		groups = {node = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
