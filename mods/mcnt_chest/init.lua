@@ -140,7 +140,7 @@ local function close_forms(pos)
 	end
 end
 
-minetest.register_node(small_name, {
+minetest.register_node(":"..small_name, {
 	description = "Chest",
 	tiles = {
 		terrain(25),
@@ -248,7 +248,7 @@ minetest.register_node(small_name, {
 	end,
 })
 
-minetest.register_node(left_name, {
+minetest.register_node(":"..left_name, {
 	tiles = {
 		terrain(25),
 		terrain(25),
@@ -365,7 +365,7 @@ minetest.register_node(left_name, {
 	end,
 })
 
-minetest.register_node(right_name, {
+minetest.register_node(":"..right_name, {
 	tiles = {
 		terrain(25),
 		terrain(25),
