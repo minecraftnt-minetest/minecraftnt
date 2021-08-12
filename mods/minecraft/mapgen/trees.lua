@@ -26,11 +26,11 @@ local function grow_sapling(pos)
 	local node = minetest.get_node(pos)
 	if node.name == "minecraft:sapling" then
 		minetest.log("action", "A sapling grows into a tree at "..
-            minetest.pos_to_string(pos))
+			minetest.pos_to_string(pos))
 		minetest.remove_node(pos)
-        pos.x = pos.x - 2
-        pos.z = pos.z - 2
-        minetest.place_schematic({x = pos.x, y = pos.y-1, z = pos.z}, minetest.get_modpath("minecraft").."/schematics/tree_"..trees[math.random(1,3)]..".mts", "random", nil, false)
+		pos.x = pos.x - 2
+		pos.z = pos.z - 2
+		minetest.place_schematic({x = pos.x, y = pos.y-1, z = pos.z}, minetest.get_modpath("minecraft").."/schematics/tree_"..trees[math.random(1,3)]..".mts", "random", nil, false)
 	end
 end
 

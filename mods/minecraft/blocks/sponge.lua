@@ -10,12 +10,12 @@ minetest.register_node("minecraft:sponge", {
 })
 
 minetest.register_abm({
-    label = "Cool sponge thingies!",
-    nodenames = {"minecraft:sponge"},
-    interval = 0.5,
-    chance = 1,
-    catch_up = true,
-    action = function(pos, node, active_object_count, active_object_count_wider)
+	label = "Cool sponge thingies!",
+	nodenames = {"minecraft:sponge"},
+	interval = 0.5,
+	chance = 1,
+	catch_up = true,
+	action = function(pos, node, active_object_count, active_object_count_wider)
 		sponge_behavior(pos)
 	end
 })

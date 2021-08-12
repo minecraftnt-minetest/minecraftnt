@@ -5,16 +5,16 @@
 doornodes = { 'hidden', 'door_a', 'door_b', 'door_c', 'door_d' }
 
 for k,v in ipairs(doornodes) do
-    minetest.register_lbm({
-        label = "Upgrade old doors ("..v..")",
-        name = "minecraft:upgrade_old_doors_"..v,
-        nodenames = {"doors:"..v},
-        run_at_every_load = true,
-        action = function(pos, node)
-            minetest.remove_node(pos)
-            minetest.set_node(pos, { name = "minecraft:"..v })
-        end,
-    })
+	minetest.register_lbm({
+		label = "Upgrade old doors ("..v..")",
+		name = "minecraft:upgrade_old_doors_"..v,
+		nodenames = {"doors:"..v},
+		run_at_every_load = true,
+		action = function(pos, node)
+			minetest.remove_node(pos)
+			minetest.set_node(pos, { name = "minecraft:"..v })
+		end,
+	})
 end
 
 -- our API object
