@@ -6,7 +6,7 @@ minetest.register_node(":minecraft:water_source", {
 	drawtype = "liquid",
 	tiles = {
 		{
-			name = "water.png",
+			name = "mcnt_liquids_water.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -16,7 +16,7 @@ minetest.register_node(":minecraft:water_source", {
 			},
 		},
 		{
-			name = "water_flow.png",
+			name = "mcnt_liquids_water_flow.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -49,7 +49,7 @@ minetest.register_node(":minecraft:water_flowing", {
 	tiles = {"water_flow.png"},
 	special_tiles = {
 		{
-			name = "water_flow.png",
+			name = "mcnt_liquids_water_flow.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -59,7 +59,7 @@ minetest.register_node(":minecraft:water_flowing", {
 			},
 		},
 		{
-			name = "water_flow.png",
+			name = "mcnt_liquids_water_flow.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -95,7 +95,7 @@ minetest.register_node(":minecraft:lava_flowing", {
 	tiles = {"lava_flow.png"},
 	special_tiles = {
 		{
-			name = "lava_flow.png",
+			name = "mcnt_liquids_lava_flow.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -105,7 +105,7 @@ minetest.register_node(":minecraft:lava_flowing", {
 			},
 		},
 		{
-			name = "lava_flow.png",
+			name = "mcnt_liquids_lava_flow.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -139,7 +139,7 @@ minetest.register_node(":minecraft:lava_source", {
 	drawtype = "liquid",
 	tiles = {
 		{
-			name = "lava.png",
+			name = "mcnt_liquids_lava.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -149,7 +149,7 @@ minetest.register_node(":minecraft:lava_source", {
 			},
 		},
 		{
-			name = "lava_flow.png",
+			name = "mcnt_liquids_lava_flow.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
