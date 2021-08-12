@@ -1,21 +1,3 @@
--- doors/init.lua
-
--- Register LBM that would replace old doors (from previous doors mod) into new doors
-
-doornodes = { 'hidden', 'door_a', 'door_b', 'door_c', 'door_d' }
-
-for k,v in ipairs(doornodes) do
-	minetest.register_lbm({
-		label = "Upgrade old doors ("..v..")",
-		name = "minecraft:upgrade_old_doors_"..v,
-		nodenames = {"doors:"..v},
-		run_at_every_load = true,
-		action = function(pos, node)
-			minetest.remove_node(pos)
-			minetest.set_node(pos, { name = "minecraft:"..v })
-		end,
-	})
-end
 
 -- our API object
 doors = {}
@@ -54,7 +36,7 @@ end
 
 -- this hidden node is placed on top of the bottom, and prevents
 -- nodes from being placed in the top half of the door.
-minetest.register_node("minecraft:hidden", {
+minetest.register_node(":minecraft:hidden", {
 	description = "Hidden Door Segment",
 	drawtype = "airlike",
 	paramtype = "light",
@@ -170,10 +152,6 @@ local function on_place_node(place_to, newnode,
 end
 
 function doors.register(name, def)
-	if not name:find(":") then
-		name = "minecraft:" .. name
-	end
-
 	minetest.register_craftitem(":" .. name, {
 		description = def.description,
 		inventory_image = def.inventory_image,
@@ -301,16 +279,16 @@ function doors.register(name, def)
 
 	def.sounds = block_sound('wood')
 
-	def.mesh = "door_a.obj"
+	def.mesh = "mcnt_door_a.obj"
 	minetest.register_node(":" .. name .. "_a", def)
 
-	def.mesh = "door_b.obj"
+	def.mesh = "mcnt_door_b.obj"
 	minetest.register_node(":" .. name .. "_b", def)
 
-	def.mesh = "door_a2.obj"
+	def.mesh = "mcnt_door_a2.obj"
 	minetest.register_node(":" .. name .. "_c", def)
 
-	def.mesh = "door_b2.obj"
+	def.mesh = "mcnt_door_b2.obj"
 	minetest.register_node(":" .. name .. "_d", def)
 
 	doors.registered_doors[name .. "_a"] = true
@@ -319,7 +297,7 @@ function doors.register(name, def)
 	doors.registered_doors[name .. "_d"] = true
 end
 
-doors.register("door", {
+doors.register("minecraft:door", {
 		tiles = {{ name = "terrain.png", backface_culling = true }},
 		description = "Wooden Door",
 		inventory_image = "items.png^[sheet:16x16:11,2",
