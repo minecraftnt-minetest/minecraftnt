@@ -1,7 +1,7 @@
 
 -- Ladders!
 
-minetest.register_node("minecraft:ladder", {
+minetest.register_node(":minecraft:ladder", {
 	description = "Ladder",
 	drawtype = "signlike",
 	is_ground_content = false,
@@ -60,4 +60,13 @@ minetest.register_node("minecraft:ladder", {
 
 		return itemstack
 	end,
+})
+
+minetest.register_craft({
+	output = "minecraft:ladder",
+	recipe = {
+		{"minecraft:stick", "", "minecraft:stick"},
+		{"minecraft:stick", "minecraft:stick", "minecraft:stick"},
+		{"minecraft:stick", "", "minecraft:stick"},
+	}
 })
