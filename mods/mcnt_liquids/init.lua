@@ -46,7 +46,7 @@ minetest.register_node(":minecraft:water_source", {
 minetest.register_node(":minecraft:water_flowing", {
 	description = "Flowing Water",
 	drawtype = "flowingliquid",
-	tiles = {"water_flow.png"},
+	tiles = {"mcnt_liquids_water_flow.png"},
 	special_tiles = {
 		{
 			name = "mcnt_liquids_water_flow.png",
@@ -92,7 +92,7 @@ minetest.register_node(":minecraft:water_flowing", {
 minetest.register_node(":minecraft:lava_flowing", {
 	description = "Flowing Lava",
 	drawtype = "flowingliquid",
-	tiles = {"lava_flow.png"},
+	tiles = {"mcnt_liquids_lava_flow.png"},
 	special_tiles = {
 		{
 			name = "mcnt_liquids_lava_flow.png",
