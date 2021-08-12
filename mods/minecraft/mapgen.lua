@@ -71,4 +71,3 @@ minetest.register_decoration({
 
 dofile(minetest.get_modpath("minecraft") .. "/mapgen/bedrock.lua")
 dofile(minetest.get_modpath("minecraft") .. "/mapgen/ores.lua")
-dofile(minetest.get_modpath("minecraft") .. "/mapgen/trees.lua")

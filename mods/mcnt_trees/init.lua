@@ -1,4 +1,4 @@
-trees = {"small", "medium", "large"}
+local trees = {"small", "medium", "large"}
 
 -- "can grow" Function
 
@@ -30,13 +30,13 @@ local function grow_sapling(pos)
 		minetest.remove_node(pos)
 		pos.x = pos.x - 2
 		pos.z = pos.z - 2
-		minetest.place_schematic({x = pos.x, y = pos.y-1, z = pos.z}, minetest.get_modpath("minecraft").."/schematics/tree_"..trees[math.random(1,3)]..".mts", "random", nil, false)
+		minetest.place_schematic({x = pos.x, y = pos.y-1, z = pos.z}, minetest.get_modpath("mcnt_trees").."/schematics/tree_"..trees[math.random(1,3)]..".mts", "random", nil, false)
 	end
 end
 
 -- Sapling block
 
-minetest.register_node("minecraft:sapling", {
+minetest.register_node(":minecraft:sapling", {
 	description = "Sapling",
 	drawtype = "plantlike",
 	tiles = { terrain(15) },
@@ -56,7 +56,7 @@ minetest.register_node("minecraft:sapling", {
 
 for k, v in pairs(trees) do
 	minetest.register_decoration({
-		name = "minecraft:tree_" ..v,
+		name = ":minecraft:tree_" ..v,
 		deco_type = "schematic",
 		place_on = {"minecraft:grass"},
 		sidelen = 16,
@@ -64,7 +64,7 @@ for k, v in pairs(trees) do
 		biomes = {"grasslands"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("minecraft") .. "/schematics/tree_"..v..".mts",
+		schematic = minetest.get_modpath("mcnt_trees").."/schematics/tree_"..v..".mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
