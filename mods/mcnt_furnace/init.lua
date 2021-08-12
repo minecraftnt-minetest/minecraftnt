@@ -9,16 +9,16 @@ function get_furnace_active_formspec(fuel_percent, item_percent)
 	"bgcolor[black;neither]"..
 	"listcolors[#ffffff00;#ffffff80]"..
 	"style_type[list;spacing=0,0]"..
-	"image[0,0;9.5,9;furnace.png]"..
+	"image[0,0;9.5,9;mcnt_furnace.png]"..
 	"list[current_player;main;0.25,7.75;9,1;0]"..
 	"list[current_player;main;0.25,4.5;9,3;9]"..
 	"list[context;src;2.75,0.75;1,1;0]"..
 	"list[context;fuel;2.75,2.75;1,1;0]"..
 	"list[context;dst;6.25,1.75;1,1;0]"..
-	"image[2.75,1.75;1,1;furnace_fire_bg.png^[lowpart:"..
-	(fuel_percent)..":furnace_fire.png]"..
-	"image[4,1.75;1.75,1;furnace_arrow_bg.png^[lowpart:"..
-	(item_percent)..":furnace_arrow.png^[transformR270]"..
+	"image[2.75,1.75;1,1;mcnt_furnace_fire_bg.png^[lowpart:"..
+	(fuel_percent)..":mcnt_furnace_fire.png]"..
+	"image[4,1.75;1.75,1;mcnt_furnace_arrow_bg.png^[lowpart:"..
+	(item_percent)..":mcnt_furnace_arrow.png^[transformR270]"..
 	"listring[context;dst]"..
 	"listring[current_player;main]"..
 	"listring[context;src]"..
@@ -34,14 +34,14 @@ function get_furnace_inactive_formspec()
 	"bgcolor[black;neither]"..
 	"listcolors[#ffffff00;#ffffff80]"..
 	"style_type[list;spacing=0,0]"..
-	"image[0,0;9.5,9;furnace.png]"..
+	"image[0,0;9.5,9;mcnt_furnace.png]"..
 	"list[current_player;main;0.25,7.75;9,1;0]"..
 	"list[current_player;main;0.25,4.5;9,3;9]"..
 	"list[context;src;2.75,0.75;1,1;0]"..
 	"list[context;fuel;2.75,2.75;1,1;0]"..
 	"list[context;dst;6.25,1.75;1,1;0]"..
-	"image[2.75,1.75;1,1;furnace_fire_bg.png]"..
-	"image[4,1.75;1.75,1;furnace_arrow_bg.png^[transformR270]"..
+	"image[2.75,1.75;1,1;mcnt_furnace_fire_bg.png]"..
+	"image[4,1.75;1.75,1;mcnt_furnace_arrow_bg.png^[transformR270]"..
 	"listring[context;dst]"..
 	"listring[current_player;main]"..
 	"listring[context;src]"..
@@ -290,7 +290,7 @@ end
 -- Node definitions
 --
 
-minetest.register_node("minecraft:furnace", {
+minetest.register_node(":minecraft:furnace", {
 	description = "Furnace",
 	tiles = {
 		terrain(1),
@@ -339,7 +339,7 @@ minetest.register_node("minecraft:furnace", {
 	sounds = block_sound('stone')
 })
 
-minetest.register_node("minecraft:lit_furnace", {
+minetest.register_node(":minecraft:lit_furnace", {
 	description = "Furnace",
 	tiles = {
 		terrain(1),
@@ -360,3 +360,5 @@ minetest.register_node("minecraft:lit_furnace", {
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
 	sounds = block_sound('stone')
 })
+
+dofile(minetest.get_modpath('mcnt_furnace').."/recipes.lua")
