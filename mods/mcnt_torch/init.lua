@@ -24,7 +24,7 @@ groups = {dig_immediate=3, torch=1, deco_block=1, attached_node=1}
 local floordef = {
 	description = "Torch",
 	drawtype = "mesh",
-	mesh = "torch_floor.obj",
+	mesh = "mcnt_torch_floor.obj",
 	inventory_image = terrain(80),
 	wield_image = terrain(80),
 	tiles = { terrain(80) },
@@ -95,14 +95,14 @@ local floordef = {
 	end,
 	on_rotate = false,
 }
-minetest.register_node(itemstring, floordef)
+minetest.register_node(":"..itemstring, floordef)
 
 local groups_wall = table.copy(groups)
 groups_wall.torch = 2
 
 local walldef = {
 	drawtype = "mesh",
-	mesh = "torch_wall.obj",
+	mesh = "mcnt_torch_wall.obj",
 	inventory_image = terrain(80),
 	tiles = { terrain(80) },
 	use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or false,
@@ -123,4 +123,12 @@ local walldef = {
 	on_rotate = false,
 }
 
-minetest.register_node(itemstring_wall, walldef)
+minetest.register_node(":"..itemstring_wall, walldef)
+
+minetest.register_craft({
+	output = "minecraft:torch 4",
+	recipe = {
+		{"minecraft:coal"},
+		{"minecraft:stick"},
+	}
+})

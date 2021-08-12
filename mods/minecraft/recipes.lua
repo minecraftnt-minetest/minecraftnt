@@ -28,14 +28,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "minecraft:torch 4",
-	recipe = {
-		{"minecraft:coal"},
-		{"minecraft:stick"},
-	}
-})
-
-minetest.register_craft({
 	output = "minecraft:bucket",
 	recipe = {
 		{"minecraft:iron_ingot", "", "minecraft:iron_ingot"},
