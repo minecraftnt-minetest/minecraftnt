@@ -229,15 +229,6 @@ minetest.register_craft({
 --
 
 minetest.register_craft({
-	output = "minecraft:chest",
-	recipe = {
-		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
-		{"minecraft:plank", "", "minecraft:plank"},
-		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
-	}
-})
-
-minetest.register_craft({
 	output = "minecraft:tnt",
 	recipe = {
 		{"minecraft:gunpowder", "minecraft:sand", "minecraft:gunpowder"},

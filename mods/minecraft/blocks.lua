@@ -437,7 +437,3 @@ minetest.register_node("minecraft:spawner", {
 	drop = "",
 	sounds = block_sound('metal'),
 })
-
--- More blocks that are in their separate code file.
-
-dofile(minetest.get_modpath("minecraft") .. "/blocks/chest.lua")

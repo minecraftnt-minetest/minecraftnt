@@ -494,3 +494,12 @@ end)
 minetest.register_on_leaveplayer(function(player)
 	player_chest_close(player)
 end)
+
+minetest.register_craft({
+	output = "minecraft:chest",
+	recipe = {
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+		{"minecraft:plank", "", "minecraft:plank"},
+		{"minecraft:plank", "minecraft:plank", "minecraft:plank"},
+	}
+})
