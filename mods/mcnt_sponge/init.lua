@@ -1,5 +1,5 @@
 
-minetest.register_node("minecraft:sponge", {
+minetest.register_node(":minecraft:sponge", {
 	description = "Sponge",
 	tiles = { terrain(48) },
 	groups = { crumbly = 3 },
