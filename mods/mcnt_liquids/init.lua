@@ -1,7 +1,7 @@
 local WATER_VISC = 1
 local LAVA_VISC = 7
 
-minetest.register_node("minecraft:water_source", {
+minetest.register_node(":minecraft:water_source", {
 	description = "Water Source",
 	drawtype = "liquid",
 	tiles = {
@@ -43,7 +43,7 @@ minetest.register_node("minecraft:water_source", {
 	waving = 3
 })
 
-minetest.register_node("minecraft:water_flowing", {
+minetest.register_node(":minecraft:water_flowing", {
 	description = "Flowing Water",
 	drawtype = "flowingliquid",
 	tiles = {"water_flow.png"},
@@ -89,7 +89,7 @@ minetest.register_node("minecraft:water_flowing", {
 
 --lavalalvalvalvavlalvalvlalvl!!!!
 
-minetest.register_node("minecraft:lava_flowing", {
+minetest.register_node(":minecraft:lava_flowing", {
 	description = "Flowing Lava",
 	drawtype = "flowingliquid",
 	tiles = {"lava_flow.png"},
@@ -134,7 +134,7 @@ minetest.register_node("minecraft:lava_flowing", {
 	waving = 3
 })
 
-minetest.register_node("minecraft:lava_source", {
+minetest.register_node(":minecraft:lava_source", {
 	description = "Lava Source",
 	drawtype = "liquid",
 	tiles = {
@@ -176,3 +176,5 @@ minetest.register_node("minecraft:lava_source", {
 	groups = {lava=3, liquid=1},
 	waving = 3
 })
+
+dofile(minetest.get_modpath('mcnt_liquids')..'/buckets.lua')

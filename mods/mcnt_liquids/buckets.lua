@@ -12,7 +12,7 @@ function bucket.register_liquid(source, flowing, itemname, inventory_image, name
 	bucket.liquids[flowing] = bucket.liquids[source]
 
 	if itemname ~= nil then
-		minetest.register_craftitem(itemname, {
+		minetest.register_craftitem(":"..itemname, {
 			description = name,
 			inventory_image = inventory_image,
 			stack_max = 1,
@@ -65,7 +65,7 @@ function bucket.register_liquid(source, flowing, itemname, inventory_image, name
 	end
 end
 
-minetest.register_craftitem("minecraft:bucket", {
+minetest.register_craftitem(":minecraft:bucket", {
 	description = "Bucket",
 	inventory_image = "items.png^[sheet:16x16:10,4",
 	groups = {tool = 1},

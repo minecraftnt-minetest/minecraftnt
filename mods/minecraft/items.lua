@@ -185,5 +185,4 @@ minetest.register_craftitem("minecraft:minecart", {
 	inventory_image = "items.png^[sheet:16x16:7,8"
 })
 
-dofile(minetest.get_modpath("minecraft") .. "/items/buckets.lua")
 dofile(minetest.get_modpath("minecraft") .. "/items/tools.lua")
