@@ -43,7 +43,7 @@ end
 
 -- Hoes
 
-minetest.register_tool("minecraft:wooden_hoe", {
+minetest.register_tool(":minecraft:wooden_hoe", {
 	description = "Wooden Hoe",
 	inventory_image = "items.png^[sheet:16x16:0,8",
 	tool_capabilities = {
@@ -53,7 +53,7 @@ minetest.register_tool("minecraft:wooden_hoe", {
 	on_place = hoe_on_place_function(60),
 })
 
-minetest.register_tool("minecraft:stone_hoe", {
+minetest.register_tool(":minecraft:stone_hoe", {
 	description = "Stone Hoe",
 	inventory_image = "items.png^[sheet:16x16:1,8",
 	tool_capabilities = {
@@ -63,7 +63,7 @@ minetest.register_tool("minecraft:stone_hoe", {
 	on_place = hoe_on_place_function(132),
 })
 
-minetest.register_tool("minecraft:iron_hoe", {
+minetest.register_tool(":minecraft:iron_hoe", {
 	description = "Iron Hoe",
 	inventory_image = "items.png^[sheet:16x16:2,8",
 	tool_capabilities = {
@@ -73,7 +73,7 @@ minetest.register_tool("minecraft:iron_hoe", {
 	on_place = hoe_on_place_function(251),
 })
 
-minetest.register_tool("minecraft:gold_hoe", {
+minetest.register_tool(":minecraft:gold_hoe", {
 	description = "Gold Hoe",
 	inventory_image = "items.png^[sheet:16x16:4,8",
 	tool_capabilities = {
@@ -83,7 +83,7 @@ minetest.register_tool("minecraft:gold_hoe", {
 	on_place = hoe_on_place_function(33),
 })
 
-minetest.register_tool("minecraft:diamond_hoe", {
+minetest.register_tool(":minecraft:diamond_hoe", {
 	description = "Diamond Hoe",
 	inventory_image = "items.png^[sheet:16x16:3,8",
 	tool_capabilities = {

@@ -174,7 +174,7 @@ end
 
 minetest.register_lbm({
 	label = "Add growth for unloaded farming plants",
-	name = "minecraft:farming_growth",
+	name = ":minecraft:farming_growth",
 	nodenames = {"group:plant"},
 	run_at_every_load = true,
 	action = function(pos, node)
@@ -186,3 +186,7 @@ minetest.register_lbm({
 		farming:grow_plant(identifier, pos, node, false, false, low_speed)
 	end,
 })
+
+dofile(minetest.get_modpath('mcnt_farming')..'/farmland.lua')
+dofile(minetest.get_modpath('mcnt_farming')..'/hoes.lua')
+dofile(minetest.get_modpath('mcnt_farming')..'/wheat.lua')

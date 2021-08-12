@@ -186,5 +186,4 @@ minetest.register_craftitem("minecraft:minecart", {
 })
 
 dofile(minetest.get_modpath("minecraft") .. "/items/buckets.lua")
-dofile(minetest.get_modpath("minecraft") .. "/items/hoes.lua")
 dofile(minetest.get_modpath("minecraft") .. "/items/tools.lua")

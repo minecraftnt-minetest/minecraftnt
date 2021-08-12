@@ -441,9 +441,7 @@ minetest.register_node("minecraft:spawner", {
 -- More blocks that are in their separate code file.
 
 dofile(minetest.get_modpath("minecraft") .. "/blocks/chest.lua")
-dofile(minetest.get_modpath("minecraft") .. "/blocks/farmland.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/furnace.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/ladder.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/liquids.lua")
 dofile(minetest.get_modpath("minecraft") .. "/blocks/torch.lua")
-dofile(minetest.get_modpath("minecraft") .. "/blocks/wheat.lua")

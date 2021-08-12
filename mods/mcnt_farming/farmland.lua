@@ -1,5 +1,5 @@
 
-minetest.register_node("minecraft:farmland", {
+minetest.register_node(":minecraft:farmland", {
 	description = "Farmland",
 	tiles = {
 		terrain(87),
@@ -23,7 +23,7 @@ minetest.register_node("minecraft:farmland", {
 	sounds = block_sound('gravel'),
 })
 
-minetest.register_node("minecraft:farmland_wet", {
+minetest.register_node(":minecraft:farmland_wet", {
 	description = "Hydrated Farmland",
 	tiles = {
 		terrain(86),

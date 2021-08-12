@@ -9,7 +9,7 @@ local sel_heights = {
 }
 
 for i = 1, 7 do
-	minetest.register_node("minecraft:wheatblock_"..i, {
+	minetest.register_node(":minecraft:wheatblock_"..i, {
 		description = "Premature Wheat Plant (Stage ".. i ..")",
 		paramtype = "light",
 		paramtype2 = "meshoptions",
@@ -32,7 +32,7 @@ for i = 1, 7 do
 	})
 end
 
-minetest.register_node("minecraft:wheatblock", {
+minetest.register_node(":minecraft:wheatblock", {
 	description = "Mature Wheat Plant",
 	sunlight_propagates = true,
 	paramtype = "light",
