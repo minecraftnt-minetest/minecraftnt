@@ -1,11 +1,3 @@
-minetest.register_alias("mapgen_stone", "minecraft:stone")
-minetest.register_alias("mapgen_water_source", "minecraft:water_source")
-minetest.register_alias("mapgen_river_water_source", "minecraft:water_source")
-
-minetest.clear_registered_biomes()
-minetest.clear_registered_ores()
-minetest.clear_registered_decorations()
-
 minetest.register_biome({
 	name = "grasslands",
 	node_top = "minecraft:grass",
@@ -69,5 +61,5 @@ minetest.register_decoration({
 	decoration = "minecraft:flower",
 })
 
-dofile(minetest.get_modpath("minecraft") .. "/mapgen/bedrock.lua")
-dofile(minetest.get_modpath("minecraft") .. "/mapgen/ores.lua")
+dofile(minetest.get_modpath("mcnt_mapgen") .. "/bedrock.lua")
+dofile(minetest.get_modpath("mcnt_mapgen") .. "/ores.lua")

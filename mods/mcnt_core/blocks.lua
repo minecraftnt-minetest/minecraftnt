@@ -1,4 +1,4 @@
-minetest.register_node("minecraft:stone", {
+minetest.register_node(":minecraft:stone", {
 	description = "Stone",
 	tiles = { terrain(1) },
 	groups = { cracky = 3 },
@@ -6,7 +6,7 @@ minetest.register_node("minecraft:stone", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:grass", {
+minetest.register_node(":minecraft:grass", {
 	description = "Grass",
 	drop = "minecraft:dirt",
 	tiles = {
@@ -18,14 +18,14 @@ minetest.register_node("minecraft:grass", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:dirt", {
+minetest.register_node(":minecraft:dirt", {
 	description = "Dirt",
 	tiles = { terrain(2) },
 	groups = { crumbly = 3, soil = 1, cultivatable = 1 },
 	sounds = block_sound('gravel'),
 })
 
-minetest.register_node("minecraft:oak", {
+minetest.register_node(":minecraft:oak", {
 	description = "Wood",
 	tiles = {
 		terrain(21),
@@ -37,7 +37,7 @@ minetest.register_node("minecraft:oak", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:leaves", {
+minetest.register_node(":minecraft:leaves", {
 	description = "Leaves",
 	drawtype = "allfaces_optional",
 	tiles = { terrain(52) },
@@ -57,7 +57,7 @@ minetest.register_node("minecraft:leaves", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:plank", {
+minetest.register_node(":minecraft:plank", {
 	description = "Wooden Planks",
 	tiles = { terrain(4) },
 	is_ground_content = false,
@@ -65,7 +65,7 @@ minetest.register_node("minecraft:plank", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:glass", {
+minetest.register_node(":minecraft:glass", {
 	description = "Glass",
 	drawtype = "glasslike_framed_optional",
 	drop = "",
@@ -77,21 +77,21 @@ minetest.register_node("minecraft:glass", {
 	sounds = block_sound('glass'),
 })
 
-minetest.register_node("minecraft:sand", {
+minetest.register_node(":minecraft:sand", {
 	description = "Sand",
 	tiles = { terrain(18) },
 	groups = { falling_node = 1, crumbly = 3 },
 	sounds = block_sound('sand'),
 })
 
-minetest.register_node("minecraft:gravel", {
+minetest.register_node(":minecraft:gravel", {
 	description = "Gravel",
 	tiles = { terrain(19) },
 	groups = {falling_node=1,crumbly=3},
 	sounds = block_sound('gravel'),
 })
 
-minetest.register_node("minecraft:cobble", {
+minetest.register_node(":minecraft:cobble", {
 	description = "Cobblestone",
 	tiles = { terrain(16) },
 	is_ground_content = false,
@@ -99,7 +99,7 @@ minetest.register_node("minecraft:cobble", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:mossycobble", {
+minetest.register_node(":minecraft:mossycobble", {
 	description = "Moss Stone",
 	tiles = { terrain(36) },
 	is_ground_content = false,
@@ -107,7 +107,7 @@ minetest.register_node("minecraft:mossycobble", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:bedrock", {
+minetest.register_node(":minecraft:bedrock", {
 	description = "Bedrock",
 	tiles = { terrain(17) },
 	is_ground_content = false,
@@ -115,7 +115,7 @@ minetest.register_node("minecraft:bedrock", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:bricks", {
+minetest.register_node(":minecraft:bricks", {
 	description = "Bricks",
 	tiles = { terrain(7) },
 	is_ground_content = false,
@@ -123,7 +123,7 @@ minetest.register_node("minecraft:bricks", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:bookshelf", {
+minetest.register_node(":minecraft:bookshelf", {
 	description = "Bookshelf",
 	tiles = {
 		terrain(4),
@@ -135,7 +135,7 @@ minetest.register_node("minecraft:bookshelf", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:coal_ore", {
+minetest.register_node(":minecraft:coal_ore", {
 	description = "Coal Ore",
 	drop = "minecraft:coal",
 	tiles = { terrain(34) },
@@ -143,21 +143,21 @@ minetest.register_node("minecraft:coal_ore", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:iron_ore", {
+minetest.register_node(":minecraft:iron_ore", {
 	description = "Iron Ore",
 	tiles = { terrain(33) },
 	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:gold_ore", {
+minetest.register_node(":minecraft:gold_ore", {
 	description = "Gold Ore",
 	tiles = { terrain(32) },
 	groups = { cracky = 2, level = 1 },
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:diamond_ore", {
+minetest.register_node(":minecraft:diamond_ore", {
 	description = "Diamond Ore",
 	drop = "minecraft:diamond",
 	tiles = { terrain(50) },
@@ -165,7 +165,7 @@ minetest.register_node("minecraft:diamond_ore", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:plank_stairs", {
+minetest.register_node(":minecraft:plank_stairs", {
 	description = "Wooden Stairs",
 	tiles = { terrain(4) },
 	is_ground_content = false,
@@ -183,7 +183,7 @@ minetest.register_node("minecraft:plank_stairs", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:cobble_stairs", {
+minetest.register_node(":minecraft:cobble_stairs", {
 	description = "Stone Stairs",
 	tiles = { terrain(16) },
 	is_ground_content = false,
@@ -201,7 +201,7 @@ minetest.register_node("minecraft:cobble_stairs", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:plank_slab", {
+minetest.register_node(":minecraft:plank_slab", {
 	description = "Wooden Slab",
 	tiles = { terrain(4) },
 	is_ground_content = false,
@@ -217,7 +217,7 @@ minetest.register_node("minecraft:plank_slab", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:cobble_slab", {
+minetest.register_node(":minecraft:cobble_slab", {
 	description = "Stone Slab",
 	tiles = { terrain(16) },
 	is_ground_content = false,
@@ -233,7 +233,7 @@ minetest.register_node("minecraft:cobble_slab", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:stone_slab", {
+minetest.register_node(":minecraft:stone_slab", {
 	description = "Stone Slab",
 	tiles = {
 		terrain(6),
@@ -256,7 +256,7 @@ minetest.register_node("minecraft:stone_slab", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:stone_slab_block", {
+minetest.register_node(":minecraft:stone_slab_block", {
 	description = "tile.stoneSlab",
 	drop = "minecraft:stone_slab",
 	tiles = {
@@ -272,7 +272,7 @@ minetest.register_node("minecraft:stone_slab_block", {
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:iron_block", {
+minetest.register_node(":minecraft:iron_block", {
 	description = "Block of Iron",
 	tiles = {
 		terrain(22),
@@ -286,7 +286,7 @@ minetest.register_node("minecraft:iron_block", {
 	sounds = block_sound('metal'),
 })
 
-minetest.register_node("minecraft:gold_block", {
+minetest.register_node(":minecraft:gold_block", {
 	description = "Block of Gold",
 	tiles = {
 		terrain(23),
@@ -300,7 +300,7 @@ minetest.register_node("minecraft:gold_block", {
 	sounds = block_sound('metal'),
 })
 
-minetest.register_node("minecraft:diamond_block", {
+minetest.register_node(":minecraft:diamond_block", {
 	description = "Block of Diamond",
 	tiles = {
 		terrain(24),
@@ -314,7 +314,7 @@ minetest.register_node("minecraft:diamond_block", {
 	sounds = block_sound('metal'),
 })
 
-minetest.register_node("minecraft:crafting_table", {
+minetest.register_node(":minecraft:crafting_table", {
 	description = "Crafting Table",
 	tiles = {
 		terrain(43),
@@ -349,14 +349,14 @@ minetest.register_node("minecraft:crafting_table", {
 	sounds = block_sound('wood'),
 })
 
-minetest.register_node("minecraft:obsidian", {
+minetest.register_node(":minecraft:obsidian", {
 	description = "Obsidian",
 	tiles = { terrain(37) },
 	groups = { cracky = 1, level = 3 },
 	sounds = block_sound('stone'),
 })
 
-minetest.register_node("minecraft:tnt", {
+minetest.register_node(":minecraft:tnt", {
 	description = "TNT",
 	tiles = {
 		terrain(9),
@@ -368,7 +368,7 @@ minetest.register_node("minecraft:tnt", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:flower", {
+minetest.register_node(":minecraft:flower", {
 	description = "Flower",
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -381,7 +381,7 @@ minetest.register_node("minecraft:flower", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:rose", {
+minetest.register_node(":minecraft:rose", {
 	description = "Rose",
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -394,7 +394,7 @@ minetest.register_node("minecraft:rose", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:mushroom", {
+minetest.register_node(":minecraft:mushroom", {
 	description = "Mushroom",
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -407,7 +407,7 @@ minetest.register_node("minecraft:mushroom", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:mushroom2", {
+minetest.register_node(":minecraft:mushroom2", {
 	description = "Mushroom",
 	drawtype = "plantlike",
 	paramtype = "light",
@@ -420,14 +420,14 @@ minetest.register_node("minecraft:mushroom2", {
 	sounds = block_sound('grass'),
 })
 
-minetest.register_node("minecraft:wool", {
+minetest.register_node(":minecraft:wool", {
 	description = "Wool",
 	tiles = { terrain(64) },
 	groups = { snappy = 1, choppy = 2, oddly_breakable_by_hand = 3 },
 	sounds = block_sound('cloth'),
 })
 
-minetest.register_node("minecraft:spawner", {
+minetest.register_node(":minecraft:spawner", {
 	description = "Mob Spawner",
 	drawtype = "allfaces",
 	tiles = { terrain(65) },

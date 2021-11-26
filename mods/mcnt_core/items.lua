@@ -42,27 +42,27 @@ else
 	})
 end
 
-minetest.register_craftitem("minecraft:flint_and_steel", {
+minetest.register_craftitem(":minecraft:flint_and_steel", {
 	description = "Flint and Steel",
 	inventory_image = "items.png^[sheet:16x16:5,0"
 })
 
-minetest.register_craftitem("minecraft:flint", {
+minetest.register_craftitem(":minecraft:flint", {
 	description = "Flint",
 	inventory_image = "items.png^[sheet:16x16:6,0"
 })
 
-minetest.register_craftitem("minecraft:coal", {
+minetest.register_craftitem(":minecraft:coal", {
 	description = "Coal",
 	inventory_image = "items.png^[sheet:16x16:7,0"
 })
 
-minetest.register_craftitem("minecraft:string", {
+minetest.register_craftitem(":minecraft:string", {
 	description = "String",
 	inventory_image = "items.png^[sheet:16x16:8,0"
 })
 
-minetest.register_craftitem("minecraft:seeds", {
+minetest.register_craftitem(":minecraft:seeds", {
 	description = "Seeds",
 	inventory_image = "items.png^[sheet:16x16:9,0",
 	on_place = function(itemstack, placer, pointed_thing)
@@ -70,119 +70,117 @@ minetest.register_craftitem("minecraft:seeds", {
 	end
 })
 
-minetest.register_craftitem("minecraft:apple", {
+minetest.register_craftitem(":minecraft:apple", {
 	description = "Apple",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:10,0",
 	on_use = minetest.item_eat(4),
 })
 
-minetest.register_craftitem("minecraft:golden_apple", {
+minetest.register_craftitem(":minecraft:golden_apple", {
 	description = "Golden Apple",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:11,0",
 	on_use = minetest.item_eat(20),
 })
 
-minetest.register_craftitem("minecraft:bow", {
+minetest.register_craftitem(":minecraft:bow", {
 	description = "Bow",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:5,1"
 })
 
-minetest.register_craftitem("minecraft:iron_ingot", {
+minetest.register_craftitem(":minecraft:iron_ingot", {
 	description = "Iron Ingot",
 	inventory_image = "items.png^[sheet:16x16:7,1"
 })
 
-minetest.register_craftitem("minecraft:feather", {
+minetest.register_craftitem(":minecraft:feather", {
 	description = "Feather",
 	inventory_image = "items.png^[sheet:16x16:8,1"
 })
 
-minetest.register_craftitem("minecraft:wheat", {
+minetest.register_craftitem(":minecraft:wheat", {
 	description = "Wheat",
 	inventory_image = "items.png^[sheet:16x16:9,1"
 })
 
-minetest.register_craftitem("minecraft:painting", {
+minetest.register_craftitem(":minecraft:painting", {
 	description = "Painting",
 	inventory_image = "items.png^[sheet:16x16:10,1"
 })
 
-minetest.register_craftitem("minecraft:arrow", {
+minetest.register_craftitem(":minecraft:arrow", {
 	description = "Arrow",
 	inventory_image = "items.png^[sheet:16x16:5,2"
 })
 
-minetest.register_craftitem("minecraft:gold_ingot", {
+minetest.register_craftitem(":minecraft:gold_ingot", {
 	description = "Gold Ingot",
 	inventory_image = "items.png^[sheet:16x16:7,2"
 })
 
-minetest.register_craftitem("minecraft:gunpowder", {
+minetest.register_craftitem(":minecraft:gunpowder", {
 	description = "Gunpowder",
 	inventory_image = "items.png^[sheet:16x16:8,2"
 })
 
-minetest.register_craftitem("minecraft:bread", {
+minetest.register_craftitem(":minecraft:bread", {
 	description = "Bread",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:9,2",
 	on_use = minetest.item_eat(5),
 })
 
-minetest.register_craftitem("minecraft:sign", {
+minetest.register_craftitem(":minecraft:sign", {
 	description = "Sign",
 	stack_max = 16,
 	inventory_image = "items.png^[sheet:16x16:10,2"
 })
 
-minetest.register_craftitem("minecraft:stick", {
+minetest.register_craftitem(":minecraft:stick", {
 	description = "Stick",
 	inventory_image = "items.png^[sheet:16x16:5,3"
 })
 
-minetest.register_craftitem("minecraft:diamond", {
+minetest.register_craftitem(":minecraft:diamond", {
 	description = "Diamond",
 	inventory_image = "items.png^[sheet:16x16:7,3",
 })
 
-minetest.register_craftitem("minecraft:bowl", {
+minetest.register_craftitem(":minecraft:bowl", {
 	description = "Bowl",
 	inventory_image = "items.png^[sheet:16x16:7,4"
 })
 
-minetest.register_craftitem("minecraft:mushroom_stew", {
+minetest.register_craftitem(":minecraft:mushroom_stew", {
 	description = "Mushroom Stew",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,4",
 	on_use = minetest.item_eat(10, "minecraft:bowl"),
 })
 
-minetest.register_craftitem("minecraft:raw_porkchop", {
+minetest.register_craftitem(":minecraft:raw_porkchop", {
 	description = "Raw Porkchop",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:7,5",
 	on_use = minetest.item_eat(3),
 })
 
-minetest.register_craftitem("minecraft:cooked_porkchop", {
+minetest.register_craftitem(":minecraft:cooked_porkchop", {
 	description = "Cooked Porkchop",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,5",
 	on_use = minetest.item_eat(8),
 })
 
-minetest.register_craftitem("minecraft:saddle", {
+minetest.register_craftitem(":minecraft:saddle", {
 	description = "Saddle",
 	stack_max = 1,
 	inventory_image = "items.png^[sheet:16x16:8,6"
 })
 
-minetest.register_craftitem("minecraft:minecart", {
+minetest.register_craftitem(":minecraft:minecart", {
 	description = "Minecart",
 	inventory_image = "items.png^[sheet:16x16:7,8"
 })
-
-dofile(minetest.get_modpath("minecraft") .. "/items/tools.lua")

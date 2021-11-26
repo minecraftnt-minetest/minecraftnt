@@ -1,6 +1,13 @@
 wield3d = {}
 
-dofile(minetest.get_modpath(minetest.get_current_modname()).."/location.lua")
+-- /location.lua
+local bone = "Arm_Right"
+local pos = {x=0, y=5.5, z=3}
+local scale = {x=0.15, y=0.15}
+local rx = -90
+local rz = 90
+
+wield3d.location = { }
 
 local has_wieldview = minetest.get_modpath("wieldview")
 local update_time_conf = minetest.setting_get("wield3d_update_time") or 1
@@ -34,12 +41,12 @@ local function add_wield_entity(player)
 	end
 end
 
-minetest.register_item("wield3d:hand", {
+minetest.register_item(":wield3d:hand", {
 	type = "none",
 	wield_image = "blank.png",
 })
 
-minetest.register_entity("wield3d:wield_entity", {
+minetest.register_entity(":wield3d:wield_entity", {
 	physical = false,
 	collisionbox = {-0.125,-0.125,-0.125, 0.125,0.125,0.125},
 	visual = "wielditem",

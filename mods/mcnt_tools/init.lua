@@ -1,4 +1,7 @@
-minetest.register_tool("minecraft:wooden_pickaxe", {
+
+dofile(minetest.get_modpath('mcnt_tools')..'/recipes.lua')
+
+minetest.register_tool(":minecraft:wooden_pickaxe", {
 	description = "Wooden Pickaxe",
 	inventory_image = "items.png^[sheet:16x16:0,6",
 	tool_capabilities = {
@@ -14,7 +17,7 @@ minetest.register_tool("minecraft:wooden_pickaxe", {
 		punch_attack_uses = 30,
 	},
 })
-minetest.register_tool("minecraft:stone_pickaxe", {
+minetest.register_tool(":minecraft:stone_pickaxe", {
 	description = "Stone Pickaxe",
 	inventory_image = "items.png^[sheet:16x16:1,6",
 	tool_capabilities = {
@@ -30,7 +33,7 @@ minetest.register_tool("minecraft:stone_pickaxe", {
 		punch_attack_uses = 66,
 	},
 })
-minetest.register_tool("minecraft:iron_pickaxe", {
+minetest.register_tool(":minecraft:iron_pickaxe", {
 	description = "Iron Pickaxe",
 	inventory_image = "items.png^[sheet:16x16:2,6",
 	tool_capabilities = {
@@ -46,7 +49,7 @@ minetest.register_tool("minecraft:iron_pickaxe", {
 		punch_attack_uses = 126,
 	},
 })
-minetest.register_tool("minecraft:golden_pickaxe", {
+minetest.register_tool(":minecraft:golden_pickaxe", {
 	description = "Golden Pickaxe",
 	inventory_image = "items.png^[sheet:16x16:4,6",
 	tool_capabilities = {
@@ -62,7 +65,7 @@ minetest.register_tool("minecraft:golden_pickaxe", {
 		punch_attack_uses = 17,
 	},
 })
-minetest.register_tool("minecraft:diamond_pickaxe", {
+minetest.register_tool(":minecraft:diamond_pickaxe", {
 	description = "Diamond Pickaxe",
 	inventory_image = "items.png^[sheet:16x16:3,6",
 	tool_capabilities = {
@@ -81,7 +84,7 @@ minetest.register_tool("minecraft:diamond_pickaxe", {
 
 -- Shovels!
 
-minetest.register_tool("minecraft:wooden_shovel", {
+minetest.register_tool(":minecraft:wooden_shovel", {
 	description = "Wooden Shovel",
 	inventory_image = "items.png^[sheet:16x16:0,5",
 	tool_capabilities = {
@@ -97,7 +100,7 @@ minetest.register_tool("minecraft:wooden_shovel", {
 		punch_attack_uses = 30,
 	},
 })
-minetest.register_tool("minecraft:stone_shovel", {
+minetest.register_tool(":minecraft:stone_shovel", {
 	description = "Stone Shovel",
 	inventory_image = "items.png^[sheet:16x16:1,5",
 	tool_capabilities = {
@@ -113,7 +116,7 @@ minetest.register_tool("minecraft:stone_shovel", {
 		punch_attack_uses = 66,
 	},
 })
-minetest.register_tool("minecraft:iron_shovel", {
+minetest.register_tool(":minecraft:iron_shovel", {
 	description = "Iron Shovel",
 	inventory_image = "items.png^[sheet:16x16:2,5",
 	tool_capabilities = {
@@ -129,7 +132,7 @@ minetest.register_tool("minecraft:iron_shovel", {
 		punch_attack_uses = 126,
 	},
 })
-minetest.register_tool("minecraft:golden_shovel", {
+minetest.register_tool(":minecraft:golden_shovel", {
 	description = "Golden Shovel",
 	inventory_image = "items.png^[sheet:16x16:4,5",
 	tool_capabilities = {
@@ -145,7 +148,7 @@ minetest.register_tool("minecraft:golden_shovel", {
 		punch_attack_uses = 17,
 	},
 })
-minetest.register_tool("minecraft:diamond_shovel", {
+minetest.register_tool(":minecraft:diamond_shovel", {
 	description = "Diamond Shovel",
 	inventory_image = "items.png^[sheet:16x16:3,5",
 	tool_capabilities = {
@@ -164,7 +167,7 @@ minetest.register_tool("minecraft:diamond_shovel", {
 
 -- Axes
 
-minetest.register_tool("minecraft:wooden_axe", {
+minetest.register_tool(":minecraft:wooden_axe", {
 	description = "Wooden Axe",
 	inventory_image = "items.png^[sheet:16x16:0,7",
 	tool_capabilities = {
@@ -180,7 +183,7 @@ minetest.register_tool("minecraft:wooden_axe", {
 		punch_attack_uses = 30,
 	},
 })
-minetest.register_tool("minecraft:stone_axe", {
+minetest.register_tool(":minecraft:stone_axe", {
 	description = "Stone Axe",
 	inventory_image = "items.png^[sheet:16x16:1,7",
 	tool_capabilities = {
@@ -196,7 +199,7 @@ minetest.register_tool("minecraft:stone_axe", {
 		punch_attack_uses = 66,
 	},
 })
-minetest.register_tool("minecraft:iron_axe", {
+minetest.register_tool(":minecraft:iron_axe", {
 	description = "Iron Axe",
 	inventory_image = "items.png^[sheet:16x16:2,7",
 	tool_capabilities = {
@@ -212,7 +215,7 @@ minetest.register_tool("minecraft:iron_axe", {
 		punch_attack_uses = 126,
 	},
 })
-minetest.register_tool("minecraft:golden_axe", {
+minetest.register_tool(":minecraft:golden_axe", {
 	description = "Golden Axe",
 	inventory_image = "items.png^[sheet:16x16:4,7",
 	tool_capabilities = {
@@ -228,7 +231,7 @@ minetest.register_tool("minecraft:golden_axe", {
 		punch_attack_uses = 17,
 	},
 })
-minetest.register_tool("minecraft:diamond_axe", {
+minetest.register_tool(":minecraft:diamond_axe", {
 	description = "Diamond Axe",
 	inventory_image = "items.png^[sheet:16x16:3,7",
 	tool_capabilities = {
