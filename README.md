@@ -1,3 +1,5 @@
+# Minecraftn't is no longer in active development. For a better and more actively developed recreation of Minecraft Alpha in Minetest, please see [Mineclone Alpha](https://github.com/rollerozxa/mineclone-alpha).
+
 <p align="center"><img width=600 src="https://raw.githubusercontent.com/danil275487/minecraftnt/main/menu/header.png"></p>
 
 ---
